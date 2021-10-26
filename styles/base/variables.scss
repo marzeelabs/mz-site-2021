@@ -1,0 +1,38 @@
+$font-family: 'arial';
+// font sizes
+$font-size-h1: 40px;
+$font-size-h2: 32px;
+$font-size-h3: 28px;
+$font-size-h4: 24px;
+$font-size-h5: 21px;
+$font-size-h6: 18px;
+$font-size-base: 16px;
+// line heights
+$line-height-h1: 48px;
+$line-height-h2: 40px;
+$line-height-h3: 36px;
+$line-height-h4: 32px;
+$line-height-h5: 29px;
+$line-height-h6: 26px;
+$line-height-base: 24px;
+// font weights
+$font-bold: 700;
+$font-regular: 400;
+// widths
+$max-width: 1200px;
+$max-width-content: 760px;
+// grid settings
+$grid-unit: 8px;
+$grid-gutter-smallmobile: 12px;
+$grid-gutter-mobile: 16px;
+$grid-gutter-tablet: 24px;
+$grid-gutter-desktop: 32px;
+$grid-gutter-wide: 40px;
+$grid-gutter-xwide: 48px;
+$grid-gutter-large: 56px;
+$grid-gutter-xlarge: 64px;
+$grid-gutter-xxlarge: 72px;
+//colors
+$color-white: #fff;
+$color-black: #000;
+$color-brand: $color-black; // change related to project

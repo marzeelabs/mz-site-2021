@@ -1,0 +1,205 @@
+// sass-lint:disable
+@use 'variables'as *;
+
+// breakpoints
+@mixin breakpoint($device) {
+  @if $device==desktop-xxxlarge {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+
+  @else if $device==desktop-xxlarge {
+    @media (min-width: 1680px) {
+      @content;
+    }
+  }
+
+  @else if $device==desktop-xlarge {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+
+  @else if $device==desktop-midlarge {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+
+  @else if $device==until-desktop-midlarge {
+    @media (max-width: 1279px) {
+      @content;
+    }
+  }
+
+  @else if $device==desktop-large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $device==until-desktop-large {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+
+  @else if $device==desktop {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $device==until-desktop {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @else if $device==only-tablet {
+    @media (min-width: 600px) and (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @else if $device==tablet-large {
+    @media (min-width: 840px) {
+      @content;
+    }
+  }
+
+  @else if $device==until-tablet-large {
+    @media (max-width: 839px) {
+      @content;
+    }
+  }
+
+  @else if $device==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $device==until-tablet-medium {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $device==tablet-small {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @else if $device==mobile {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @else if $device==mobile-small {
+    @media (max-width: 440px) {
+      @content;
+    }
+  }
+}
+
+//
+// List reset
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none outside none;
+  list-style-image: none;
+
+  & li {
+    list-style: none outside none;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  word-wrap: normal;
+}
+
+// visually-hidden--off()
+//
+// Turns off the visually-hidden effect.
+//
+@mixin visually-hidden--off {
+  position: static !important;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+//
+// clearfix
+@mixin clearfixer {
+
+  &:before,
+  &:after {
+    content: ''; // 1
+    display: table; // 2
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// textstyles
+@mixin textstyle($textstyle) {
+  @if $textstyle==heading1 {
+    font-size: $font-size-h1;
+    font-weight: $font-bold;
+    line-height: $line-height-h1;
+  }
+
+  @else if $textstyle==heading2 {
+    font-size: $font-size-h2;
+    font-weight: $font-bold;
+    line-height: $line-height-h2;
+  }
+
+  @else if $textstyle==heading3 {
+    font-size: $font-size-h3;
+    font-weight: $font-bold;
+    line-height: $line-height-h3;
+  }
+
+  @else if $textstyle==heading4 {
+    font-size: $font-size-h4;
+    font-weight: $font-bold;
+    line-height: $line-height-h4;
+  }
+
+  @else if $textstyle==heading5 {
+    font-size: $font-size-h5;
+    font-weight: $font-bold;
+    line-height: $line-height-h5;
+  }
+
+  @else if $textstyle==heading6 {
+    font-size: $font-size-h6;
+    font-weight: $font-bold;
+    line-height: $line-height-h6;
+  }
+
+  @else if $textstyle==body {
+    font-size: $font-size-base;
+    font-weight: $font-regular;
+    line-height: $line-height-base;
+  }
+}

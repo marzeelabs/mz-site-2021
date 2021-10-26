@@ -1,106 +1,111 @@
 // sass-lint:disable
 @use 'variables'as *;
 
-// breakpoints
 @mixin breakpoint($device) {
   @if $device==desktop-xxxlarge {
-    @media (min-width: 1920px) {
+    @media (min-width: map-get($breakpoints, desktop-xxxlarge)) {
       @content;
     }
   }
 
   @else if $device==desktop-xxlarge {
-    @media (min-width: 1680px) {
+    @media (min-width: map-get($breakpoints, desktop-xxlarge)) {
       @content;
     }
   }
 
   @else if $device==desktop-xlarge {
-    @media (min-width: 1440px) {
+    @media (min-width: map-get($breakpoints, desktop-xlarge)) {
       @content;
     }
   }
 
   @else if $device==desktop-midlarge {
-    @media (min-width: 1280px) {
+    @media (min-width: map-get($breakpoints, desktop-midlarge)) {
       @content;
     }
   }
 
   @else if $device==until-desktop-midlarge {
-    @media (max-width: 1279px) {
+    @media (max-width: calc(#{map-get($breakpoints, desktop-midlarge)} - 1px)) {
       @content;
     }
   }
 
   @else if $device==desktop-large {
-    @media (min-width: 1200px) {
+    @media (min-width: map-get($breakpoints, desktop-large)) {
       @content;
     }
   }
 
   @else if $device==until-desktop-large {
-    @media (max-width: 1199px) {
+    @media (max-width: calc(#{map-get($breakpoints, desktop-large)} - 1px)) {
       @content;
     }
   }
 
   @else if $device==desktop {
-    @media (min-width: 992px) {
+    @media (min-width: map-get($breakpoints, desktop)) {
       @content;
     }
   }
 
   @else if $device==until-desktop {
-    @media (max-width: 991px) {
+    @media (max-width: calc(#{map-get($breakpoints, desktop)} - 1px)) {
+      @content;
+    }
+  }
+
+  @else if $device==only-tablet-medium {
+    @media (min-width: map-get($breakpoints, tablet)) and (max-width: calc(#{map-get($breakpoints, desktop)} - 1px)) {
       @content;
     }
   }
 
   @else if $device==only-tablet {
-    @media (min-width: 600px) and (max-width: 991px) {
+    @media (min-width: map-get($breakpoints, tablet-small)) and (max-width: calc(#{map-get($breakpoints, desktop)} - 1px)) {
       @content;
     }
   }
 
   @else if $device==tablet-large {
-    @media (min-width: 840px) {
+    @media (min-width: map-get($breakpoints, tablet-large)) {
       @content;
     }
   }
 
   @else if $device==until-tablet-large {
-    @media (max-width: 839px) {
+    @media (max-width: calc(#{map-get($breakpoints, tablet-large)} - 1px)) {
       @content;
     }
   }
 
   @else if $device==tablet {
-    @media (min-width: 768px) {
+    @media (min-width: map-get($breakpoints, tablet)) {
       @content;
     }
   }
 
-  @else if $device==until-tablet-medium {
-    @media (max-width: 767px) {
+  @else if $device==until-tablet {
+    @media (max-width: calc(#{map-get($breakpoints, tablet)} - 1px)) {
       @content;
     }
   }
 
   @else if $device==tablet-small {
-    @media (min-width: 600px) {
+    @media (min-width: map-get($breakpoints, tablet-small)) {
       @content;
     }
   }
 
   @else if $device==mobile {
-    @media (max-width: 599px) {
+    @media (max-width: calc(#{map-get($breakpoints, tablet-small)} - 1px)) {
       @content;
     }
   }
 
   @else if $device==mobile-small {
-    @media (max-width: 440px) {
+    @media (max-width: calc(#{map-get($breakpoints, mobile-small)} - 1px)) {
       @content;
     }
   }
@@ -162,44 +167,44 @@
 // textstyles
 @mixin textstyle($textstyle) {
   @if $textstyle==heading1 {
-    font-size: $font-size-h1;
-    font-weight: $font-bold;
-    line-height: $line-height-h1;
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h1);
   }
 
   @else if $textstyle==heading2 {
-    font-size: $font-size-h2;
-    font-weight: $font-bold;
-    line-height: $line-height-h2;
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h2);
   }
 
   @else if $textstyle==heading3 {
-    font-size: $font-size-h3;
-    font-weight: $font-bold;
-    line-height: $line-height-h3;
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h3);
   }
 
   @else if $textstyle==heading4 {
-    font-size: $font-size-h4;
-    font-weight: $font-bold;
-    line-height: $line-height-h4;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h4);
   }
 
   @else if $textstyle==heading5 {
-    font-size: $font-size-h5;
-    font-weight: $font-bold;
-    line-height: $line-height-h5;
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h5);
   }
 
   @else if $textstyle==heading6 {
-    font-size: $font-size-h6;
-    font-weight: $font-bold;
-    line-height: $line-height-h6;
+    font-size: var(--fs-h6);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h6);
   }
 
   @else if $textstyle==body {
-    font-size: $font-size-base;
-    font-weight: $font-regular;
-    line-height: $line-height-base;
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    line-height: var(--ln-body);
   }
 }

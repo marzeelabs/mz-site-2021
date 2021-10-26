@@ -1,38 +1,99 @@
-$font-family: 'arial';
-// font sizes
-$font-size-h1: 40px;
-$font-size-h2: 32px;
-$font-size-h3: 28px;
-$font-size-h4: 24px;
-$font-size-h5: 21px;
-$font-size-h6: 18px;
-$font-size-base: 16px;
-// line heights
-$line-height-h1: 48px;
-$line-height-h2: 40px;
-$line-height-h3: 36px;
-$line-height-h4: 32px;
-$line-height-h5: 29px;
-$line-height-h6: 26px;
-$line-height-base: 24px;
-// font weights
-$font-bold: 700;
-$font-regular: 400;
-// widths
-$max-width: 1200px;
-$max-width-content: 760px;
-// grid settings
-$grid-unit: 8px;
-$grid-gutter-smallmobile: 12px;
-$grid-gutter-mobile: 16px;
-$grid-gutter-tablet: 24px;
-$grid-gutter-desktop: 32px;
-$grid-gutter-wide: 40px;
-$grid-gutter-xwide: 48px;
-$grid-gutter-large: 56px;
-$grid-gutter-xlarge: 64px;
-$grid-gutter-xxlarge: 72px;
-//colors
-$color-white: #fff;
-$color-black: #000;
-$color-brand: $color-black; // change related to project
+:root {
+  //
+  //
+  // Color styles
+  --color_brand_blue_xdark: #0A203B;
+  --color_brand_acqua: #00F5D3;
+  --color_brand_blue: #3E00EE;
+  --color_brand_magenta: #FF70FF;
+  --color_brand_purple: #5C0286;
+  --color_brand_yellow: #FFB803;
+  --color_white: #FFFFFF;
+  --color_grey_light: #F4F4F4;
+  --color_black: #000000;
+  //
+  //
+  // grid === gd
+  --gr-unit: 8px;
+  --gr-gutter-smallmobile: 12px;
+  --gr-gutter-mobile: 16px;
+  --gr-gutter-tablet: 24px;
+  --gr-gutter-desktop: 32px;
+  --gr-gutter-wide: 40px;
+  --gr-gutter-xwide: 48px;
+  --gr-gutter-large: 56px;
+  --gr-gutter-xlarge: 64px;
+  --gr-gutter-xxlarge: 72px;
+  //
+  //
+  // Text-size styles
+  //
+  // font family === ff
+  --ff-sans: 'Inter', sans-serif;
+  //
+  // font size === fs
+  --fs-display: 96px;
+  --fs-display-small: 72px;
+  --fs-h1: 40px;
+  --fs-h2: 32px;
+  --fs-h3: 24px;
+  --fs-h4: 20px;
+  --fs-h5: 18px;
+  --fs-h6: 14px;
+  --fs-body: 16px;
+  --fs-body-small: 14px;
+  --fs-caption: 12px;
+  //
+  // line height === lh
+  --ln-display: 104px;
+  --ln-display-small: 80px;
+  --ln-h1: 48px;
+  --ln-h2: 30px;
+  --ln-h3: 32px;
+  --ln-h4: 28px;
+  --ln-h5: 26px;
+  --ln-h6: 22px;
+  --ln-body: 24px;
+  --ln-body-small: 22px;
+  --ln-caption: 20px;
+  //
+  // font weight === fw
+  --fw-black: 900;
+  --fw-bold: 700;
+  --fw-medium: 600;
+  --fw-regular: 400;
+  //
+  //
+  // Effect styles
+  --homepage_cards: 0 40px 48px rgba(0, 0, 0, .24);
+  //
+  //
+  // Screen Size === ss
+  --ss-desktop-xxxlarge: 1920px;
+  --ss-desktop-xxlarge: 1680px;
+  --ss-desktop-xlarge: 1440px;
+  --ss-desktop-midlarge: 1280px;
+  --ss-desktop-large: 1200px;
+  --ss-desktop: 992px;
+  --ss-tablet-large: 840px;
+  --ss-tablet: 768px;
+  --ss-tablet-small: 600px;
+  --ss-mobile-small: 375px;
+}
+
+//
+//
+// breakpoints
+$breakpoints: ( // used in mixins
+  desktop-xxxlarge: var(--ss-desktop-xxxlarge),
+  desktop-xxlarge: var(--ss-desktop-xxlarge),
+  desktop-xlarge: var(--ss-desktop-xlarge),
+  desktop-midlarge: var(--ss-desktop-midlarge),
+  desktop-large: var(--ss-desktop-large),
+  desktop: var(--ss-desktop),
+  tablet-large: var(--ss-tablet-large),
+  tablet: var(--ss-tablet),
+  tablet-small: var(--ss-tablet-small),
+  mobile-small: var(--ss-mobile-small));
+//
+//

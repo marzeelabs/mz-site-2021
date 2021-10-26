@@ -1,29 +1,33 @@
 :root {
   //
   //
-  // Color styles
-  --color_brand_blue_xdark: #0A203B;
-  --color_brand_acqua: #00F5D3;
-  --color_brand_blue: #3E00EE;
-  --color_brand_magenta: #FF70FF;
-  --color_brand_purple: #5C0286;
-  --color_brand_yellow: #FFB803;
-  --color_white: #FFFFFF;
-  --color_grey_light: #F4F4F4;
-  --color_black: #000000;
+  // Colors === clr
+  --clr-brand-blue-xdark: #0A203B;
+  --clr-brand-acqua: #00F5D3;
+  --clr-brand-blue: #3E00EE;
+  --clr-brand-magenta: #FF70FF;
+  --clr-brand-purple: #5C0286;
+  --clr-brand-yellow: #FFB803;
+  --clr-white: #FFFFFF;
+  --clr-grey-light: #F4F4F4;
+  --clr-black: #000000;
   //
   //
   // grid === gd
-  --gr-unit: 8px;
-  --gr-gutter-smallmobile: 12px;
-  --gr-gutter-mobile: 16px;
-  --gr-gutter-tablet: 24px;
-  --gr-gutter-desktop: 32px;
-  --gr-gutter-wide: 40px;
-  --gr-gutter-xwide: 48px;
-  --gr-gutter-large: 56px;
-  --gr-gutter-xlarge: 64px;
-  --gr-gutter-xxlarge: 72px;
+  --gd-unit: 8px;
+  --gd-gutter-smallmobile: 12px;
+  --gd-gutter-mobile: 16px;
+  --gd-gutter-tablet: 24px;
+  --gd-gutter-desktop: 32px;
+  --gd-gutter-wide: 40px;
+  --gd-gutter-xwide: 48px;
+  --gd-gutter-large: 56px;
+  --gd-gutter-xlarge: 64px;
+  --gd-gutter-xxlarge: 72px;
+  //
+  //
+  // Layout
+  --max-width-main: 1210px;
   //
   //
   // Text-size styles
@@ -66,34 +70,22 @@
   //
   // Effect styles
   --homepage_cards: 0 40px 48px rgba(0, 0, 0, .24);
-  //
-  //
-  // Screen Size === ss
-  --ss-desktop-xxxlarge: 1920px;
-  --ss-desktop-xxlarge: 1680px;
-  --ss-desktop-xlarge: 1440px;
-  --ss-desktop-midlarge: 1280px;
-  --ss-desktop-large: 1200px;
-  --ss-desktop: 992px;
-  --ss-tablet-large: 840px;
-  --ss-tablet: 768px;
-  --ss-tablet-small: 600px;
-  --ss-mobile-small: 375px;
+  --ease-time: .25s;
 }
 
 //
 //
 // breakpoints
 $breakpoints: ( // used in mixins
-  desktop-xxxlarge: var(--ss-desktop-xxxlarge),
-  desktop-xxlarge: var(--ss-desktop-xxlarge),
-  desktop-xlarge: var(--ss-desktop-xlarge),
-  desktop-midlarge: var(--ss-desktop-midlarge),
-  desktop-large: var(--ss-desktop-large),
-  desktop: var(--ss-desktop),
-  tablet-large: var(--ss-tablet-large),
-  tablet: var(--ss-tablet),
-  tablet-small: var(--ss-tablet-small),
-  mobile-small: var(--ss-mobile-small));
+  desktop-xxxlarge: 1920px,
+  desktop-xxlarge: 1680px,
+  desktop-xlarge: 1440px,
+  desktop-midlarge: 1280px,
+  desktop-large: 1200px,
+  desktop: 992px,
+  tablet-large: 840px,
+  tablet: 768px,
+  tablet-small: 600px,
+  mobile-small: 375px);
 //
 //

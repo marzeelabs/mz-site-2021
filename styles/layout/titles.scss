@@ -1,0 +1,51 @@
+@use '../base'as *;
+
+.title-display-large {
+  @include breakpoint(until-desktop) {
+    @include textstyle(display)
+  }
+
+  @include breakpoint(desktop) {
+    @include textstyle(display-large)
+  }
+}
+
+.title-display {
+  @include breakpoint(until-desktop) {
+    @include textstyle(display-small)
+  }
+
+  @include breakpoint(desktop) {
+    @include textstyle(display)
+  }
+}
+
+.title-display-small {
+  @include breakpoint(until-desktop) {
+    @include textstyle(heading1)
+  }
+
+  @include breakpoint(desktop) {
+    @include textstyle(display-small)
+  }
+}
+
+.title-heading-1 {
+  @include breakpoint(until-desktop) {
+    @include textstyle(heading2)
+  }
+
+  @include breakpoint(desktop) {
+    @include textstyle(heading1)
+  }
+}
+
+.title-heading-3 {
+  @include breakpoint(until-desktop) {
+    @include textstyle(heading4)
+  }
+
+  @include breakpoint(desktop) {
+    @include textstyle(heading3)
+  }
+}

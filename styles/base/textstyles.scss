@@ -1,0 +1,67 @@
+@mixin textstyle($textstyle) {
+  @if $textstyle==display-large {
+    font-size: var(--fs-display-large);
+    font-weight: var(--fw-black);
+    line-height: var(--ln-display-large);
+  }
+
+  @else if $textstyle==display {
+    font-size: var(--fs-display);
+    font-weight: var(--fw-black);
+    line-height: var(--ln-display);
+  }
+
+  @else if $textstyle==display-small {
+    font-size: var(--fs-display-small);
+    font-weight: var(--fw-black);
+    line-height: var(--ln-display-small);
+  }
+
+  @else if $textstyle==heading1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h1);
+  }
+
+  @else if $textstyle==heading2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h2);
+  }
+
+  @else if $textstyle==heading3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h3);
+  }
+
+  @else if $textstyle==heading4 {
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h4);
+  }
+
+  @else if $textstyle==heading5 {
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h5);
+  }
+
+  @else if $textstyle==heading6 {
+    font-size: var(--fs-h6);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-h6);
+  }
+
+  @else if $textstyle==body {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    line-height: var(--ln-body);
+  }
+
+  @else if $textstyle==body-bold {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-body);
+  }
+}

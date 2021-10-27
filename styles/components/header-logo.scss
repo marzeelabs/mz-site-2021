@@ -1,0 +1,41 @@
+@use '../base'as *;
+
+.header-logo {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  position: relative;
+
+  @include breakpoint(until-desktop) {
+    width: 155px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 180px;
+  }
+
+  // the pseudo padding controls the parents height ratio
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 31.66%;
+  }
+
+  svg.logo-mz {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  g.wordmark path {
+    fill: hsl(var(--clr-white));
+  }
+
+  circle.circle {
+    opacity: 0;
+  }
+}

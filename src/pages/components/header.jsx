@@ -1,15 +1,27 @@
-// import Logo from '../../../public/assets/mz_logo_horizontal.svg';
-
+import Logo from './logo';
 const Header = () => { 
-  console.log("Yo");
 
+  if (typeof window !== "undefined") {
+    window.addEventListener('load',function(){
+      const mobileMenu = document.querySelectorAll(".header-toggle");
+      const mobileDropdown = document.querySelectorAll(".header-menu");
+
+      mobileMenu[0].addEventListener('click', function(e) {
+        this.classList.toggle("is-open");
+        mobileDropdown[0].classList.toggle("is-visible");
+        document.body.classList.toggle("has-menu-open");
+      });
+    });
+  }
 
   return (
   <>
     <header className="header">
       <div className="header-content">
-        {/* <Logo /> */}
-        <h2>Header Logo</h2>
+
+        <a className="header-logo" href="/">
+          <Logo/>
+        </a>
 
         <ul className="header-menu">
           <li className="header-menu__item">
@@ -30,8 +42,11 @@ const Header = () => {
         </ul>
       </div>
 
-
-
+      <div className="header-toggle__wrapper">
+        <button className="header-toggle" aria-label="open menu">
+          <span className="header-toggle__icon" aria-label="menu icon"></span>
+        </button>
+      </div>
 
     </header>
    

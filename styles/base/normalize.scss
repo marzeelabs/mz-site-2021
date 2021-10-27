@@ -1,5 +1,7 @@
 // sass-lint:disable indentation no-vendor-prefixes
 @use 'variables'as *;
+@use 'mixins'as *;
+@use 'textstyles'as *;
 
 html {
   line-height: var(--ln-body);

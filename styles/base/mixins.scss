@@ -1,5 +1,6 @@
 // sass-lint:disable
 @use 'variables'as *;
+@use 'textstyles'as *;
 
 @mixin breakpoint($device) {
   @if $device==desktop-xxxlarge {
@@ -164,53 +165,42 @@
   }
 }
 
-// textstyles
-@mixin textstyle($textstyle) {
-  @if $textstyle==heading1 {
-    font-size: var(--fs-h1);
-    font-weight: var(--fw-bold);
-    line-height: var(--ln-h1);
+//
+// button
+@mixin button($bgcolor: hsl(var(--clr-brand-acqua)),
+  $bgcolor-hover: hsl(var(--clr-brand-blue)),
+  $color: hsl(var(--clr-brand-blue)),
+  $color-hover: hsl(var(--clr-white)),
+  $border-color: hsl(var(--clr-brand-acqua)),
+  $border-color-hover: hsl(var(--clr-brand-blue)),
+) {
+  display: inline-block;
+  border: 1px solid $border-color;
+  color: $color;
+  background-color: $bgcolor;
+  cursor: pointer;
+  transition: all ease var(--ease-time);
+
+  @include breakpoint(until-desktop) {
+    @include textstyle(heading4);
+    border-radius: var(--gd-gutter-tablet);
+    padding: var(--gd-gutter-smallmobile) var(--gd-gutter-tablet);
   }
 
-  @else if $textstyle==heading2 {
-    font-size: var(--fs-h2);
-    font-weight: var(--fw-bold);
-    line-height: var(--ln-h2);
+  @include breakpoint(desktop) {
+    @include textstyle(heading3);
+    border-radius: var(--gd-gutter-desktop);
+    padding: var(--gd-gutter-mobile) var(--gd-gutter-desktop);
   }
 
-  @else if $textstyle==heading3 {
-    font-size: var(--fs-h3);
-    font-weight: var(--fw-bold);
-    line-height: var(--ln-h3);
-  }
-
-  @else if $textstyle==heading4 {
-    font-size: var(--fs-h4);
-    font-weight: var(--fw-bold);
-    line-height: var(--ln-h4);
-  }
-
-  @else if $textstyle==heading5 {
-    font-size: var(--fs-h5);
-    font-weight: var(--fw-bold);
-    line-height: var(--ln-h5);
-  }
-
-  @else if $textstyle==heading6 {
-    font-size: var(--fs-h6);
-    font-weight: var(--fw-bold);
-    line-height: var(--ln-h6);
-  }
-
-  @else if $textstyle==body {
-    font-size: var(--fs-body);
-    font-weight: var(--fw-regular);
-    line-height: var(--ln-body);
-  }
-
-  @else if $textstyle==body-bold {
-    font-size: var(--fs-body);
-    font-weight: var(--fw-bold);
-    line-height: var(--ln-body);
+  &.is-active,
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus-within {
+    outline: 0;
+    color: $color-hover;
+    background-color: $bgcolor-hover;
+    border: 1px solid $border-color-hover;
   }
 }

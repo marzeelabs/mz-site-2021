@@ -1,10 +1,17 @@
-@use '../base/variables'as *;
-@use '../base/mixins'as *;
+@use '../base'as *;
 
 .header {
-  background-color: var(--clr-brand-blue-xdark);
-  color: var(--clr-white);
-  padding: var(--gd-gutter-tablet);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-header);
+  background-color: hsl(var(--clr-brand-blue-xdark));
+  color: hsl(var(--clr-white));
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-mobile) var(--gd-gutter-tablet);
+  }
 
   @include breakpoint(desktop) {
     padding: var(--gd-gutter-desktop);
@@ -14,6 +21,7 @@
 .header-content {
   max-width: var(--max-width-main);
   margin: 0 auto;
+  line-height: 1;
 
   @include breakpoint(desktop) {
     display: flex;

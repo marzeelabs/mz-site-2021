@@ -43,7 +43,7 @@ const Header = () => {
       </div>
 
       <div className="header-toggle__wrapper">
-        <button className="header-toggle" aria-label="open menu">
+        <button className="header-toggle" type="button" aria-label="open menu">
           <span className="header-toggle__icon" aria-label="menu icon"></span>
         </button>
       </div>

@@ -1,6 +1,5 @@
 :root {
   //
-  //
   // Colors === clr
   --clr-brand-blue-xdark: 213 71% 13.5%; // #0A203B;
   --clr-brand-acqua: 172 100% 48%; // #00F5D3;
@@ -11,6 +10,7 @@
   --clr-white: 0 0% 100%; //  #FFFFFF;
   --clr-grey-light: 0 0% 95.7%; // #F4F4F4;
   --clr-black: 0 0% 0%; //#000000;
+  //
   //
   // grid === gd
   --gd-unit: 8px;
@@ -70,8 +70,14 @@
   //
   //
   // Effect styles
-  --homepage_cards: 0 40px 48px rgba(0, 0, 0, .24);
+  --homepage_cards: 0 40px 48px rgba(0, 0, 0, .32);
   --ease-time: .25s;
+  --border-radius: var(--gd-gutter-tablet);
+
+  @media (min-width: 992px) {
+    --border-radius: var(--gd-gutter-desktop);
+  }
+
   //
   //
   // Header height

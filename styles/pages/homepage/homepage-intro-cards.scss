@@ -5,26 +5,32 @@
   margin: 0 auto;
   position: relative;
   z-index: var(--z-index-common);
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: var(--gd-gutter-desktop);
+  }
 }
 
 .homepage-intro__cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  @include breakpoint(until-desktop) {
-    padding: var(--gd-gutter-tablet);
-  }
+  width: 100%;
 
   @include breakpoint(tablet-small) {
+    width: calc(100% + var(--gd-gutter-smallmobile) * 2);
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 calc(var(--gd-gutter-smallmobile) * -1);
   }
 
   @include breakpoint(desktop) {
-    padding: var(--gd-gutter-desktop);
     align-items: flex-start;
+    width: calc(100% + var(--gd-gutter-tablet) * 2);
     margin: 0 calc(var(--gd-gutter-tablet) * -1);
   }
 }

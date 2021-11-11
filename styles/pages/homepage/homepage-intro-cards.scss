@@ -4,7 +4,7 @@
   max-width: var(--max-width-main);
   margin: 0 auto;
   position: relative;
-  z-index: var(--z-index-common);
+  z-index: var(--z-index-lift);
 
   @include breakpoint(until-desktop) {
     padding: var(--gd-gutter-tablet);
@@ -75,6 +75,25 @@
 .homepage-intro__card__title {
   color: hsl(var(--clr-brand-acqua));
   text-align: center;
+}
+
+.homepage-intro__card__link {
+  color: hsl(var(--clr-brand-acqua));
+  text-decoration: none;
+  transition:
+    background-color ease-in-out var(--ease-time),
+    background-size ease-in-out var(--ease-time),
+    color ease var(--ease-time);
+  background-image: linear-gradient(hsl(var(--clr-brand-acqua)), hsl(var(--clr-brand-acqua)));
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 0% .125rem;
+
+  &:hover {
+    color: hsl(var(--clr-brand-yellow));
+    background-image: linear-gradient(hsl(var(--clr-brand-yellow)), hsl(var(--clr-brand-yellow)));
+    background-size: 100% .125rem;
+  }
 }
 
 .homepage-intro__card__desc {

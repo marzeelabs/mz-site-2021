@@ -17,6 +17,12 @@
     line-height: var(--ln-display-small);
   }
 
+  @else if $textstyle==heading1_black {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-black);
+    line-height: var(--ln-h1);
+  }
+
   @else if $textstyle==heading1 {
     font-size: var(--fs-h1);
     font-weight: var(--fw-bold);

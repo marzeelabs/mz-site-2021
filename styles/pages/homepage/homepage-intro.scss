@@ -3,7 +3,7 @@
 .homepage-intro__wrapper {
   background-color: hsl(var(--clr-brand-yellow));
   position: relative;
-  z-index: var(--z-index-common);
+  z-index: var(--z-index-lift);
 
   &::before {
     content: '';
@@ -24,7 +24,7 @@
 
 .homepage-intro__container {
   position: relative;
-  z-index: var(--z-index-common);
+  z-index: var(--z-index-lift);
   max-width: var(--max-width-main);
   margin: 0 auto;
   color: hsl(var(--clr-white));

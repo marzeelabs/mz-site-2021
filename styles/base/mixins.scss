@@ -45,6 +45,24 @@
     }
   }
 
+  @else if $device==only-desktop-medium {
+    @media (min-width: map-get($breakpoints, desktop-medium)) and (max-width: calc(#{map-get($breakpoints, desktop-large)} - 1px)) {
+      @content;
+    }
+  }
+
+  @else if $device==desktop-medium {
+    @media (min-width: map-get($breakpoints, desktop-medium)) {
+      @content;
+    }
+  }
+
+  @else if $device==only-desktop {
+    @media (min-width: map-get($breakpoints, desktop)) and (max-width: calc(#{map-get($breakpoints, desktop-large)} - 1px)) {
+      @content;
+    }
+  }
+
   @else if $device==desktop {
     @media (min-width: map-get($breakpoints, desktop)) {
       @content;
@@ -101,6 +119,12 @@
 
   @else if $device==mobile {
     @media (max-width: calc(#{map-get($breakpoints, tablet-small)} - 1px)) {
+      @content;
+    }
+  }
+
+  @else if $device==from-mobile {
+    @media (min-width: map-get($breakpoints, mobile-small)) {
       @content;
     }
   }

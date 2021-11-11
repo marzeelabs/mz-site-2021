@@ -53,7 +53,7 @@
   --ln-display: 104px;
   --ln-display-small: 80px;
   --ln-h1: 48px;
-  --ln-h2: 30px;
+  --ln-h2: 40px;
   --ln-h3: 32px;
   --ln-h4: 28px;
   --ln-h5: 26px;
@@ -91,7 +91,8 @@
   //
   // z-index's
   --z-index-header: 99;
-  --z-index-common: 5;
+  --z-index-lift: 5;
+  --z-index-neutral: 1;
   --z-index-negative: -1;
   --z-index-modal: 999;
 }
@@ -105,6 +106,7 @@ $breakpoints: ( // used in mixins
   desktop-xlarge: 1440px,
   desktop-midlarge: 1280px,
   desktop-large: 1200px,
+  desktop-medium: 1024px,
   desktop: 992px,
   tablet-large: 840px,
   tablet: 768px,

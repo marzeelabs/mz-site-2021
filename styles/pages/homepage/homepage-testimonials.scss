@@ -3,6 +3,7 @@
 .homepage-testimonials {
   min-height: 600px;
   background-image: linear-gradient(0deg, hsl(var(--clr-black)) 0%, hsl(var(--clr-brand-purple)) 100%);
+  margin-top: -.125rem;
 }
 
 .homepage-testimonials__content {
@@ -54,8 +55,10 @@
   @include breakpoint(desktop) {
     position: relative;
     z-index: var(--z-index-lift);
-    transform: translateY(-9vw);
-    margin-bottom: -12vw;
+    // transform: translateY(max(-9vw, -30rem));
+    // margin-bottom: max(-12vw, -30rem);
+    transform: translateY(-7.5rem);
+    margin-bottom: -7.5rem;
   }
 }
 

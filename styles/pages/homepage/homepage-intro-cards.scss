@@ -94,12 +94,22 @@
     background-image: linear-gradient(hsl(var(--clr-brand-yellow)), hsl(var(--clr-brand-yellow)));
     background-size: 100% .125rem;
   }
+
+  &::selection {
+    color: hsl(var(--clr-brand-blue-xdark));
+    background: hsl(var(--clr-brand-yellow));
+  }
 }
 
 .homepage-intro__card__desc {
   margin-top: var(--gd-gutter-mobile);
   color: hsl(var(--clr-white));
   text-align: center;
+
+  &::selection {
+    color: hsl(var(--clr-brand-blue-xdark));
+    background: hsl(var(--clr-brand-acqua));
+  }
 }
 
 .homepage-intro__card__button {
@@ -113,4 +123,12 @@
   position: absolute;
   bottom: 0;
   right: 0;
+
+  &.is-active,
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus-within {
+    transform: none;
+  }
 }

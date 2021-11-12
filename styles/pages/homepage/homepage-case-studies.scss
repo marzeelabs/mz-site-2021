@@ -5,7 +5,7 @@
   color: hsl(var(--clr-brand-acqua));
   position: relative;
   z-index: var(--z-index-neutral);
-  margin-top: -.0625rem;
+  margin-top: -.125rem;
   text-align: center;
 }
 
@@ -22,13 +22,13 @@
   }
 
   @include breakpoint(desktop) {
-    transform: translateY(max(-28vw, -480px));
-    margin-bottom: max(-28vw, -480px);
-    padding: var(--gd-gutter-desktop);
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: var(--gd-gutter-wide);
     align-items: center;
+    padding: var(--gd-gutter-desktop);
+    margin-bottom: max(-28vw, -30rem);
+    transform: translateY(max(-28vw, -30rem));
 
     > * {
       max-width: calc(var(--max-width-main) / 2);
@@ -44,6 +44,11 @@
     grid-row: 1 / 2;
     justify-self: start;
     margin-top: 23%;
+  }
+
+  > *::selection {
+    color: hsl(var(--clr-brand-blue-xdark));
+    background: hsl(var(--clr-brand-acqua));
   }
 }
 
@@ -73,4 +78,8 @@
 // ++++++++++++++++++++++++++++ cta below
 .homepage-case-studies__cta {
   margin: var(--gd-gutter-xlarge) auto;
+
+  @include breakpoint(desktop) {
+    margin: var(--gd-gutter-xlarge) auto 0;
+  }
 }

@@ -58,6 +58,13 @@
     grid-column: 1 / 6;
   }
 
+  [class*="title"] {
+    &::selection {
+      color: hsl(var(--clr-brand-blue-xdark));
+      background: hsl(var(--clr-brand-yellow));
+    }
+  }
+
   .title-heading-3 {
     margin: var(--gd-gutter-tablet) 0 var(--gd-gutter-wide);
 

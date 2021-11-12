@@ -42,6 +42,13 @@
 }
 
 // ++++++++++++++++++++left block
+.homepage-infographic__left {
+  > *::selection {
+    color: hsl(var(--clr-brand-yellow));
+    background: hsl(var(--clr-brand-purple));
+  }
+}
+
 .homepage-infographic__title {
   margin: var(--gd-gutter-mobile) 0;
   color: hsl(var(--clr-brand-purple));

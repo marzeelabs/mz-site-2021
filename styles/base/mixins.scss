@@ -203,7 +203,7 @@
   color: $color;
   background-color: $bgcolor;
   cursor: pointer;
-  transition: all ease calc(var(--ease-time) * 1.5);
+  transition: all ease-in-out calc(var(--ease-time) * 1.5);
   border-radius: $border-radius;
 
   @include breakpoint(until-desktop) {
@@ -226,5 +226,6 @@
     background-color: $bgcolor-hover;
     border: 1px solid $border-color-hover;
     box-shadow: var(--homepage_cards);
+    transform: translateY(-4px);
   }
 }

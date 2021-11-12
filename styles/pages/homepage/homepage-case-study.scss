@@ -43,7 +43,7 @@
 
   .homepage-case-study:first-of-type & {
     @include breakpoint(desktop) {
-      max-width: 48rem;
+      max-width: 50rem;
     }
   }
 
@@ -99,6 +99,11 @@
     background-image: linear-gradient(hsl(var(--clr-brand-blue)), hsl(var(--clr-brand-blue)));
     background-size: 100% .125rem;
   }
+
+  &::selection {
+    color: hsl(var(--clr-brand-yellow));
+    background: hsl(var(--clr-brand-purple));
+  }
 }
 
 .homepage-case-study__link__cta {
@@ -109,6 +114,11 @@
   color: hsl(var(--clr-brand-purple));
   transition: color ease var(--ease-time);
   margin-top: var(--gd-unit);
+
+  &::selection {
+    color: hsl(var(--clr-brand-yellow));
+    background: hsl(var(--clr-brand-purple));
+  }
 
   &::after {
     content: '';

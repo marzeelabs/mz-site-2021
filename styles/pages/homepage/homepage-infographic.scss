@@ -1,10 +1,17 @@
 @use '../../base'as *;
 
-.homepage-intro__infographic__wrapper {
+.homepage-infographic__wrapper {
   background-color: hsl(var(--clr-brand-yellow));
+  background-image: url("data:image/svg+xml,%3Csvg width='1680' height='390' preserveAspectRatio='none' viewBox='0 0 1680 390' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 389.5V0C0 0 320.25 94.2474 840 94.2474C1359.75 94.2474 1680 0 1680 0V389.5H0Z' fill='%235C0286'/%3E%3C/svg%3E%0A");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 10%;
+  position: relative;
+  z-index: var(--z-index-neutral);
 }
 
-.homepage-intro__infographic__content {
+.homepage-infographic__content {
   max-width: var(--max-width-main);
   margin: 0 auto;
   position: relative;
@@ -23,8 +30,8 @@
   }
 }
 
-.homepage-intro__infographic__left,
-.homepage-intro__infographic__right {
+.homepage-infographic__left,
+.homepage-infographic__right {
   @include breakpoint(until-desktop) {
     width: 100%;
   }
@@ -35,7 +42,7 @@
 }
 
 // ++++++++++++++++++++left block
-.homepage-intro__infographic__title {
+.homepage-infographic__title {
   margin: var(--gd-gutter-mobile) 0;
   color: hsl(var(--clr-brand-purple));
 
@@ -52,7 +59,7 @@
   }
 }
 
-.homepage-intro__infographic__subtitle {
+.homepage-infographic__subtitle {
   @include breakpoint(until-desktop-midlarge) {
     @include textstyle(heading2);
   }
@@ -66,7 +73,7 @@
   }
 }
 
-.homepage-intro__infographic__subtitle--small {
+.homepage-infographic__subtitle--small {
   @include breakpoint(until-desktop) {
     margin-bottom: var(--gd-gutter-wide)
   }
@@ -81,8 +88,9 @@
 }
 
 // ++++++++++++++++++++++++++ right block
-.homepage-intro__infographic__right {
+.homepage-infographic__right {
   position: relative;
+  z-index: var(--z-index-lift);
 
   @include breakpoint(until-desktop) {
     margin: 0 auto;
@@ -90,14 +98,14 @@
   }
 }
 
-.homepage-intro__infographic__img {
+.homepage-infographic__img {
   position: relative;
   z-index: var(--z-index-negative);
   filter: drop-shadow(0px 61.8948px 44.2106px rgba(0, 0, 0, 0.45));
 }
 
 // +++++++++++++++++++++++++++++ text pills
-.homepage-intro__infographic__item {
+.homepage-infographic__item {
   position: absolute;
   display: inline-block;
   z-index: var(--z-index-lift);

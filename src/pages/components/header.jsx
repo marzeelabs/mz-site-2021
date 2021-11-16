@@ -19,7 +19,7 @@ const Header = () => {
     <header className="header">
       <div className="header-content">
 
-        <a className="header-logo" href="/" title="homepage">
+        <a className="mz-logo" href="/" title="homepage">
           <Logo/>
         </a>
 

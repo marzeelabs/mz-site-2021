@@ -23,10 +23,12 @@
   --gd-gutter-large: 3.5rem; // 56px
   --gd-gutter-xlarge: 4rem; // 64px
   --gd-gutter-xxlarge: 4.5rem; // 72px
+  --gd-gutter-xxxlarge: 5rem; // 80px
   //
   //
   // Layout
   --max-width-main: 75.625rem; // 1210px
+  --max-width-small: 36.5rem; // 584px
   //
   //
   // Text-size styles
@@ -37,7 +39,7 @@
   // font size === fs
   --fs-display-large: 6.5rem; // 104px
   --fs-display: 6rem; // 96px
-  --fs-display-small: 4.5rem; // 72px
+  --fs-display-small: 4rem; // 64px
   --fs-h1: 2.5rem; // 40px
   --fs-h2: 2rem; // 32px
   --fs-h3: 1.5rem; // 24px
@@ -51,7 +53,7 @@
   // line height === lh
   --ln-display-large: 7rem; // 112px
   --ln-display: 6.5rem; // 104px
-  --ln-display-small: 5rem; // 80px
+  --ln-display-small: 4.5rem; // 72px
   --ln-h1: 3rem; // 48px
   --ln-h2: 2.5rem; // 40px
   --ln-h3: 2rem; // 32px
@@ -71,7 +73,7 @@
   //
   // Effect styles
   --homepage_cards: 0 2.5rem 3rem rgba(0, 0, 0, .32);
-  --ease-time: .25s;
+  --ease-time: .2s;
   --border-radius: var(--gd-gutter-tablet);
 
   @media (min-width: 992px) {

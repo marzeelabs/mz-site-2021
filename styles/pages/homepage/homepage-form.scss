@@ -1,0 +1,120 @@
+@use '../../base'as *;
+
+.homepage-form__wrapper {
+  margin-top: -.125rem;
+  background-color: hsl(var(--clr-black));
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-xxlarge) var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: var(--gd-gutter-xxxlarge) var(--gd-gutter-desktop);
+  }
+}
+
+.homepage-form__bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-index-neutral);
+  pointer-events: none;
+  transition:
+    transform ease-in-out calc(var(--ease-time) * 3),
+    opacity ease-in-out var(--ease-time);
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet);
+    max-width: 95%;
+    top: -4%;
+  }
+
+  @include breakpoint(desktop) {
+    opacity: .75;
+    top: 6%;
+    max-width: 59.25rem;
+    transform: translate3d(-55%, 0, 0);
+
+    .homepage-form:hover + &,
+    .homepage-form:focus + &,
+    .homepage-form:focus-within + & {
+      transform: translate3d(-55%, 0, 0) scale(1.015);
+      opacity: 1;
+    }
+  }
+}
+
+.homepage-form__title {
+  color: hsl(var(--clr-brand-acqua));
+  margin: var(--gd-gutter-xxlarge) auto;
+  filter: drop-shadow(0 .25rem 1.25rem rgba(0, 0, 0, 1));
+  position: relative;
+  z-index: var(--z-index-lift);
+
+  &::selection {
+    color: hsl(var(--clr-brand-blue-xdark));
+    background: hsl(var(--clr-brand-yellow));
+  }
+}
+
+.homepage-form {
+  margin: 0 auto;
+  max-width: var(--max-width-small);
+  filter: drop-shadow(0 .25rem 1.25rem rgba(0, 0, 0, 1));
+  position: relative;
+  z-index: var(--z-index-lift);
+}
+
+.homepage-form__label {
+  margin-bottom: var(--gd-gutter-tablet);
+  position: relative;
+  display: block;
+
+  textarea,
+  input {
+    width: 100%;
+    padding: var(--gd-gutter-tablet);
+    border: none;
+    outline: none;
+    border-radius: var(--gd-gutter-tablet);
+    background-color: hsl(var(--clr-white));
+  }
+
+  textarea::placeholder,
+  input::placeholder {
+    opacity: 0;
+  }
+
+  span {
+    @include textstyle(body);
+    position: absolute;
+    left: var(--gd-gutter-tablet);
+    transform: translateY(-50%);
+    transition-duration: var(--ease-time);
+  }
+
+  input + span {
+    top: 50%;
+  }
+
+  textarea + span {
+    top: calc(var(--gd-gutter-tablet) + var(--gd-gutter-smallmobile));
+  }
+
+  &:focus > span,
+  &:focus-within > span,
+  textarea:not(:placeholder-shown) + span,
+  input:not(:placeholder-shown) + span {
+    @include textstyle(body-small);
+    color: hsl(var(--clr-brand-purple));
+    transform: translateY(calc(-100% - var(--gd-unit) / 2));
+  }
+}
+
+.homepage-form__submit {
+  @include button();
+  width: 100%;
+}

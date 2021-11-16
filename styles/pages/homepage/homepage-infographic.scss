@@ -52,18 +52,6 @@
 .homepage-infographic__title {
   margin: var(--gd-gutter-mobile) 0;
   color: hsl(var(--clr-brand-purple));
-
-  @include breakpoint(mobile) {
-    @include textstyle(heading1_black);
-  }
-
-  @include breakpoint(tablet-small) {
-    @include textstyle(display-small);
-  }
-
-  @include breakpoint(desktop-midlarge) {
-    @include textstyle(display);
-  }
 }
 
 .homepage-infographic__subtitle {
@@ -108,11 +96,16 @@
 .homepage-infographic__img {
   position: relative;
   z-index: var(--z-index-negative);
-  filter: drop-shadow(0px 61.8948px 44.2106px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 2.875rem .8125rem rgba(0, 0, 0, .35));
+
+  @include breakpoint(desktop-large) {
+    filter: drop-shadow(0 3.875rem .8125rem rgba(0, 0, 0, .35));
+  }
 }
 
 // +++++++++++++++++++++++++++++ text pills
 .homepage-infographic__item {
+  filter: drop-shadow(0 1.875rem .8125rem rgba(0, 0, 0, .15));
   position: absolute;
   display: inline-block;
   z-index: var(--z-index-lift);

@@ -9,8 +9,8 @@ const HomepageInfographic = () =>
           
           <div className="homepage-infographic__left">
             <p className="homepage-infographic__subtitle">We Transform</p>
-            <h1 className="homepage-infographic__title">Your Ideas<br />Into Reality</h1>
-            <p className="homepage-infographic__subtitle--small">By bringing Current Technologies with Your Business Goals</p>
+            <h1 className="homepage-infographic__title title-display">Your Ideas<br />Into Reality</h1>
+            <p className="homepage-infographic__subtitle--small">By Bridging Current Technologies with Your Business Goals</p>
           </div>
 
           <div className="homepage-infographic__right">

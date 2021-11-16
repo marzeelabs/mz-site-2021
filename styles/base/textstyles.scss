@@ -70,4 +70,22 @@
     font-weight: var(--fw-bold);
     line-height: var(--ln-body);
   }
+
+  @else if $textstyle==body-small {
+    font-size: var(--fs-body-small);
+    font-weight: var(--fw-regular);
+    line-height: var(--ln-body-small);
+  }
+
+  @else if $textstyle==caption {
+    font-size: var(--fs-caption);
+    font-weight: var(--fw-regular);
+    line-height: var(--ln-caption);
+  }
+
+  @else if $textstyle==caption-bold {
+    font-size: var(--fs-caption);
+    font-weight: var(--fw-bold);
+    line-height: var(--ln-caption);
+  }
 }

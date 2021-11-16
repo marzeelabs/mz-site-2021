@@ -4,6 +4,7 @@
   min-height: 600px;
   background-image: linear-gradient(0deg, hsl(var(--clr-black)) 0%, hsl(var(--clr-brand-purple)) 100%);
   margin-top: -.125rem;
+  padding-bottom: var(--gd-gutter-xxlarge);
 }
 
 .homepage-testimonials__content {
@@ -19,7 +20,9 @@
   @include breakpoint(desktop) {
     padding: 0 var(--gd-gutter-desktop) var(--gd-gutter-desktop);
     display: grid;
-    grid-template-areas: 'message list';
+    grid-template-areas:
+      'message .'
+      'message list';
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: var(--gd-gutter-xwide);
     align-items: center;
@@ -55,9 +58,7 @@
   @include breakpoint(desktop) {
     position: relative;
     z-index: var(--z-index-lift);
-    // transform: translateY(max(-9vw, -30rem));
-    // margin-bottom: max(-12vw, -30rem);
-    transform: translateY(-7.5rem);
+    transform: translateY(-5.5rem);
     margin-bottom: -7.5rem;
   }
 }
@@ -67,18 +68,7 @@
   z-index: var(--z-index-lift);
   color: hsl(var(--clr-brand-yellow));
   text-align: left;
-
-  @include breakpoint(until-desktop) {
-    margin-bottom: var(--gd-gutter-xwide);
-  }
-
-  @include breakpoint(tablet) {
-    @include textstyle(display-small);
-  }
-
-  @include breakpoint(desktop-medium) {
-    @include textstyle(display);
-  }
+  margin-bottom: var(--gd-gutter-xwide);
 
   &::selection,
   span::selection {

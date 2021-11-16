@@ -2,8 +2,10 @@
 
 .header-toggle__wrapper {
   position: absolute;
-  top: var(--gd-gutter-tablet);
+  top: var(--gd-gutter-desktop);
   right: var(--gd-gutter-tablet);
+  height: var(--gd-gutter-tablet);
+  width: var(--gd-gutter-tablet);
 
   @include breakpoint(desktop) {
     display: none;
@@ -11,13 +13,14 @@
 }
 
 .header-toggle {
+  cursor: pointer;
+  display: block;
   position: relative;
   overflow: hidden;
   margin: 0;
+  padding: 0;
   height: var(--gd-gutter-tablet);
   width: var(--gd-gutter-tablet);
-  cursor: pointer;
-  display: inline-block;
   background: transparent;
   border: 0;
 }

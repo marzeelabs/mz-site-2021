@@ -16,7 +16,11 @@ footer.footer {
 }
 
 .footer-copyright {
-  @include textstyle(body-bold);
+  @include textstyle(body-small-bold);
+
+  @include breakpoint(tablet) {
+    @include textstyle(body-bold);
+  }
 
   span::selection,
   &::selection {
@@ -26,7 +30,11 @@ footer.footer {
 }
 
 .footer-copyright__spacer {
-  margin: 0 var(--gd-gutter-mobile);
+  margin: 0 var(--gd-unit);
+
+  @include breakpoint(tablet) {
+    margin: 0 var(--gd-gutter-mobile);
+  }
 }
 
 .footer-social {

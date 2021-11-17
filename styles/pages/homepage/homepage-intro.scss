@@ -83,8 +83,12 @@
   }
 
   img {
-    filter: drop-shadow(var(--gd-gutter-mobile) var(--gd-gutter-xwide) var(--gd-gutter-mobile) hsl(var(--clr-brand-blue-xdark) / .35));
+    filter: drop-shadow(var(--gd-gutter-mobile) var(--gd-gutter-desktop) var(--gd-gutter-mobile) hsl(var(--clr-brand-blue-xdark) / .35));
     position: relative;
     z-index: var(--z-index-negative);
+
+    @include breakpoint(desktop) {
+      filter: drop-shadow(var(--gd-gutter-mobile) var(--gd-gutter-xwide) var(--gd-gutter-mobile) hsl(var(--clr-brand-blue-xdark) / .35));
+    }
   }
 }

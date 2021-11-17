@@ -41,11 +41,6 @@
       background-color: hsl(var(--clr-brand-blue-xdark));
     }
   }
-
-  *::selection {
-    color: hsl(var(--clr-brand-blue-xdark));
-    background: hsl(var(--clr-brand-yellow));
-  }
 }
 
 .about-intro__list__content__right {
@@ -56,15 +51,15 @@
   @include breakpoint(tablet-large) {
     padding: 0 var(--gd-gutter-desktop) calc(var(--gd-gutter-xlarge) * 2) 0;
   }
-
-  *::selection {
-    background: hsl(var(--clr-brand-blue-xdark));
-    color: hsl(var(--clr-brand-yellow));
-  }
 }
 
 // +++++++++++++++++++++++++++++++++++++++++++++ list
 .about-intro__list {
+  *::selection {
+    color: hsl(var(--clr-brand-blue-xdark));
+    background: hsl(var(--clr-brand-yellow));
+  }
+
   @include breakpoint(tablet-large) {
     .about-intro__list__content__left & {
       padding-right: var(--gd-gutter-xlarge);
@@ -72,6 +67,11 @@
 
     .about-intro__list__content__right & {
       padding-left: var(--gd-gutter-xlarge);
+
+      *::selection {
+        background: hsl(var(--clr-brand-blue-xdark));
+        color: hsl(var(--clr-brand-yellow));
+      }
     }
   }
 }

@@ -14,8 +14,8 @@
   }
 
   *::selection {
-    color: hsl(var(--clr-brand-blue-xdark));
-    background: hsl(var(--clr-brand-yellow));
+    color: hsl(var(--clr-brand-acqua));
+    background: hsl(var(--clr-brand-blue-xdark));
   }
 }
 
@@ -40,5 +40,5 @@
 }
 
 .about-message__pretitle {
-  color: hsl(var(--clr-brand-blue-xdark))
+  color: hsl(var(--clr-brand-blue-xdark));
 }

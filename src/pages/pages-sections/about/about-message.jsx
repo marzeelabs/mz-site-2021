@@ -1,4 +1,4 @@
-const AboutIntroMessage = () =>
+const AboutMessage = () =>
 
  (
     <>
@@ -26,4 +26,4 @@ const AboutIntroMessage = () =>
     </>
   );
 
-export default AboutIntroMessage;
+export default AboutMessage;

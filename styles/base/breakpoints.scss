@@ -1,6 +1,5 @@
 // sass-lint:disable
 @use 'variables'as *;
-@use 'textstyles'as *;
 
 @mixin breakpoint($device) {
   @if $device==desktop-xxxlarge {

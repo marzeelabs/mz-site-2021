@@ -22,7 +22,7 @@ const Header = () => {
 
         <ul className={isOpen ? 'header-menu is-visible' : 'header-menu'}>
           <li className="header-menu__item">
-            <a className="header-menu__link" href="#">About</a>
+            <a className="header-menu__link" href="/about">About</a>
           </li>
 
           <li className="header-menu__item">

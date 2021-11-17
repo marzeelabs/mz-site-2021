@@ -8,11 +8,11 @@
   position: relative;
 
   @include breakpoint(until-desktop) {
-    width: 155px;
+    width: 9.6875rem;
   }
 
   @include breakpoint(desktop) {
-    width: 180px;
+    width: 11.25rem;
   }
 
   // the pseudo-element padding controls the parents height ratio

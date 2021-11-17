@@ -1,5 +1,7 @@
 // sass-lint:disable no-duplicate-properties no-vendor-prefixes id-name-format indentation
+@use 'variables'as *;
 @use 'mixins'as *;
+@use 'textstyles'as *;
 
 html {
   height: -webkit-fill-available;
@@ -18,12 +20,7 @@ body {
 }
 
 main {
-  flex: 1;
-
-  @media all and (-ms-high-contrast: none),
-  (-ms-high-contrast: active) {
-    flex: 0 1 auto;
-  }
+  padding-top: var(--header-height);
 }
 
 h1 {
@@ -64,4 +61,11 @@ p {
 ul,
 ol {
   @include reset-list();
+}
+
+a {
+  // Help prevent overflow of long words/names/URLs
+  overflow-wrap: break-word;
+  // Optional, not supported for all languages
+  hyphens: auto;
 }

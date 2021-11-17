@@ -1,38 +1,118 @@
-$font-family: 'arial';
-// font sizes
-$font-size-h1: 40px;
-$font-size-h2: 32px;
-$font-size-h3: 28px;
-$font-size-h4: 24px;
-$font-size-h5: 21px;
-$font-size-h6: 18px;
-$font-size-base: 16px;
-// line heights
-$line-height-h1: 48px;
-$line-height-h2: 40px;
-$line-height-h3: 36px;
-$line-height-h4: 32px;
-$line-height-h5: 29px;
-$line-height-h6: 26px;
-$line-height-base: 24px;
-// font weights
-$font-bold: 700;
-$font-regular: 400;
-// widths
-$max-width: 1200px;
-$max-width-content: 760px;
-// grid settings
-$grid-unit: 8px;
-$grid-gutter-smallmobile: 12px;
-$grid-gutter-mobile: 16px;
-$grid-gutter-tablet: 24px;
-$grid-gutter-desktop: 32px;
-$grid-gutter-wide: 40px;
-$grid-gutter-xwide: 48px;
-$grid-gutter-large: 56px;
-$grid-gutter-xlarge: 64px;
-$grid-gutter-xxlarge: 72px;
-//colors
-$color-white: #fff;
-$color-black: #000;
-$color-brand: $color-black; // change related to project
+:root {
+  //
+  // Colors === clr
+  --clr-brand-blue-xdark: 213 71% 13.5%; // #0A203B;
+  --clr-brand-acqua: 172 100% 48%; // #00F5D3;
+  --clr-brand-blue: 256 100% 46.7%; // #3E00EE;
+  --clr-brand-magenta: 300 100% 72%; //#FF70FF;
+  --clr-brand-purple: 281 97.1% 26.7%; //#5C0286;
+  --clr-brand-yellow: 43 100% 50.6%; // #FFB803;
+  --clr-white: 0 0% 100%; //  #FFFFFF;
+  --clr-grey-light: 0 0% 95.7%; // #F4F4F4;
+  --clr-black: 0 0% 0%; //#000000;
+  //
+  //
+  // grid === gd
+  --gd-unit: .5rem; // 8px
+  --gd-gutter-smallmobile: .75rem; // 12px
+  --gd-gutter-mobile: 1rem; // 16px
+  --gd-gutter-tablet: 1.5rem; // 24px
+  --gd-gutter-desktop: 2rem; // 32px
+  --gd-gutter-wide: 2.5rem; // 40px
+  --gd-gutter-xwide: 3rem; // 48px
+  --gd-gutter-large: 3.5rem; // 56px
+  --gd-gutter-xlarge: 4rem; // 64px
+  --gd-gutter-xxlarge: 4.5rem; // 72px
+  --gd-gutter-xxxlarge: 5rem; // 80px
+  //
+  //
+  // Layout
+  --max-width-main: 75.625rem; // 1210px
+  --max-width-small: 36.5rem; // 584px
+  //
+  //
+  // Text-size styles
+  //
+  // font family === ff
+  --ff-sans: 'Inter', sans-serif;
+  //
+  // font size === fs
+  --fs-display-large: 6.5rem; // 104px
+  --fs-display: 6rem; // 96px
+  --fs-display-small: 4rem; // 64px
+  --fs-h1: 2.5rem; // 40px
+  --fs-h2: 2rem; // 32px
+  --fs-h3: 1.5rem; // 24px
+  --fs-h4: 1.25rem; // 20px
+  --fs-h5: 1.125rem; // 18px
+  --fs-h6: .875rem; // 14px
+  --fs-body: 1rem; // 16px
+  --fs-body-small: .875rem; // 14px
+  --fs-caption: .75rem; // 12px
+  //
+  // line height === lh
+  --ln-display-large: 7rem; // 112px
+  --ln-display: 6.5rem; // 104px
+  --ln-display-small: 4.5rem; // 72px
+  --ln-h1: 3rem; // 48px
+  --ln-h2: 2.5rem; // 40px
+  --ln-h3: 2rem; // 32px
+  --ln-h4: 1.75rem; // 28px
+  --ln-h5: 1.625rem; // 26px
+  --ln-h6: 22px; // 22px
+  --ln-body: 1.5rem; // 24px
+  --ln-body-small: 1.375rem; // 22px
+  --ln-caption: 1.25rem; // 20px
+  //
+  // font weight === fw
+  --fw-black: 900;
+  --fw-bold: 700;
+  --fw-medium: 600;
+  --fw-regular: 400;
+  //
+  //
+  // Effect styles
+  --homepage_cards: 0 2.5rem 3rem rgba(0, 0, 0, .32);
+  --ease-time: .2s;
+  --border-radius: var(--gd-gutter-tablet);
+
+  @media (min-width: 992px) {
+    --border-radius: var(--gd-gutter-desktop);
+  }
+
+  //
+  //
+  // Header height
+  --header-height: 5.1875rem; // 83px
+
+  @media (min-width: 992px) {
+    --header-height: 7.5rem; //120px
+  }
+
+  //
+  //
+  // z-index's
+  --z-index-header: 99;
+  --z-index-lift: 5;
+  --z-index-neutral: 1;
+  --z-index-negative: -1;
+  --z-index-modal: 999;
+}
+
+//
+//
+// breakpoints
+$breakpoints: ( // used in mixins
+  desktop-xxxlarge: 1920px,
+  desktop-xxlarge: 1680px,
+  desktop-xlarge: 1440px,
+  desktop-midlarge: 1280px,
+  desktop-large: 1200px,
+  desktop-medium: 1024px,
+  desktop: 992px,
+  tablet-large: 840px,
+  tablet: 768px,
+  tablet-small: 600px,
+  mobile-small: 375px);
+//
+//

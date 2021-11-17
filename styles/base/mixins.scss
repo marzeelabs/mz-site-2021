@@ -1,110 +1,7 @@
 // sass-lint:disable
 @use 'variables'as *;
-
-// breakpoints
-@mixin breakpoint($device) {
-  @if $device==desktop-xxxlarge {
-    @media (min-width: 1920px) {
-      @content;
-    }
-  }
-
-  @else if $device==desktop-xxlarge {
-    @media (min-width: 1680px) {
-      @content;
-    }
-  }
-
-  @else if $device==desktop-xlarge {
-    @media (min-width: 1440px) {
-      @content;
-    }
-  }
-
-  @else if $device==desktop-midlarge {
-    @media (min-width: 1280px) {
-      @content;
-    }
-  }
-
-  @else if $device==until-desktop-midlarge {
-    @media (max-width: 1279px) {
-      @content;
-    }
-  }
-
-  @else if $device==desktop-large {
-    @media (min-width: 1200px) {
-      @content;
-    }
-  }
-
-  @else if $device==until-desktop-large {
-    @media (max-width: 1199px) {
-      @content;
-    }
-  }
-
-  @else if $device==desktop {
-    @media (min-width: 992px) {
-      @content;
-    }
-  }
-
-  @else if $device==until-desktop {
-    @media (max-width: 991px) {
-      @content;
-    }
-  }
-
-  @else if $device==only-tablet {
-    @media (min-width: 600px) and (max-width: 991px) {
-      @content;
-    }
-  }
-
-  @else if $device==tablet-large {
-    @media (min-width: 840px) {
-      @content;
-    }
-  }
-
-  @else if $device==until-tablet-large {
-    @media (max-width: 839px) {
-      @content;
-    }
-  }
-
-  @else if $device==tablet {
-    @media (min-width: 768px) {
-      @content;
-    }
-  }
-
-  @else if $device==until-tablet-medium {
-    @media (max-width: 767px) {
-      @content;
-    }
-  }
-
-  @else if $device==tablet-small {
-    @media (min-width: 600px) {
-      @content;
-    }
-  }
-
-  @else if $device==mobile {
-    @media (max-width: 599px) {
-      @content;
-    }
-  }
-
-  @else if $device==mobile-small {
-    @media (max-width: 440px) {
-      @content;
-    }
-  }
-}
+@use 'textstyles'as *;
+@use 'breakpoints'as *;
 
 //
 // List reset
@@ -148,58 +45,54 @@
 // clearfix
 @mixin clearfixer {
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: ''; // 1
     display: table; // 2
   }
 
-  &:after {
+  &::after {
     clear: both;
   }
 }
 
-// textstyles
-@mixin textstyle($textstyle) {
-  @if $textstyle==heading1 {
-    font-size: $font-size-h1;
-    font-weight: $font-bold;
-    line-height: $line-height-h1;
+//
+// button
+@mixin button($bgcolor: hsl(var(--clr-brand-acqua)),
+  $bgcolor-hover: hsl(var(--clr-brand-blue)),
+  $color: hsl(var(--clr-brand-blue)),
+  $color-hover: hsl(var(--clr-white)),
+  $border-color: hsl(var(--clr-brand-acqua)),
+  $border-color-hover: hsl(var(--clr-brand-blue)),
+  $border-radius: var(--border-radius)) {
+  display: inline-block;
+  border: 1px solid $border-color;
+  color: $color;
+  background-color: $bgcolor;
+  cursor: pointer;
+  transition: all ease-in-out calc(var(--ease-time) * 1.5);
+  border-radius: $border-radius;
+
+  @include breakpoint(until-desktop) {
+    @include textstyle(heading4);
+    padding: var(--gd-gutter-smallmobile) var(--gd-gutter-tablet);
   }
 
-  @else if $textstyle==heading2 {
-    font-size: $font-size-h2;
-    font-weight: $font-bold;
-    line-height: $line-height-h2;
+  @include breakpoint(desktop) {
+    @include textstyle(heading3);
+    padding: var(--gd-gutter-mobile) var(--gd-gutter-desktop);
   }
 
-  @else if $textstyle==heading3 {
-    font-size: $font-size-h3;
-    font-weight: $font-bold;
-    line-height: $line-height-h3;
-  }
-
-  @else if $textstyle==heading4 {
-    font-size: $font-size-h4;
-    font-weight: $font-bold;
-    line-height: $line-height-h4;
-  }
-
-  @else if $textstyle==heading5 {
-    font-size: $font-size-h5;
-    font-weight: $font-bold;
-    line-height: $line-height-h5;
-  }
-
-  @else if $textstyle==heading6 {
-    font-size: $font-size-h6;
-    font-weight: $font-bold;
-    line-height: $line-height-h6;
-  }
-
-  @else if $textstyle==body {
-    font-size: $font-size-base;
-    font-weight: $font-regular;
-    line-height: $line-height-base;
+  &.is-active,
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus-within {
+    outline: 0;
+    color: $color-hover;
+    background-color: $bgcolor-hover;
+    border: 1px solid $border-color-hover;
+    box-shadow: var(--homepage_cards);
+    transform: translateY(-4px);
   }
 }

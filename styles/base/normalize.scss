@@ -1,8 +1,10 @@
 // sass-lint:disable indentation no-vendor-prefixes
 @use 'variables'as *;
+@use 'mixins'as *;
+@use 'textstyles'as *;
 
 html {
-  line-height: $line-height-base;
+  line-height: var(--ln-body);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -17,10 +19,10 @@ html {
 
 body {
   margin: 0;
-  font-family: $font-family, -apple-system,
+  font-family: var(--ff-sans), -apple-system,
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
-  font-size: $font-size-base;
+  font-size: var(--fs-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,7 +45,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: $font-bold;
+  font-weight: var(--fw-bold);
 }
 
 sub,
@@ -70,7 +72,7 @@ textarea {
   margin: 0;
   font-family: inherit;
   font-size: 100%;
-  line-height: $line-height-base;
+  line-height: var(--ln-body);
 
   &:focus,
   &:active {

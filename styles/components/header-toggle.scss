@@ -33,7 +33,7 @@
   top: var(--gd-unit);
   left: 0;
   width: var(--gd-gutter-tablet);
-  height: 2px;
+  height: .125rem;
   background-color: hsl(var(--clr-brand-acqua));
 
   &::before,
@@ -44,7 +44,7 @@
     position: absolute;
     left: 0;
     width: var(--gd-gutter-tablet);
-    height: 2px;
+    height: .125rem;
     background-color: hsl(var(--clr-brand-acqua));
   }
 

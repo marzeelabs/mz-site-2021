@@ -12,9 +12,9 @@ const AboutIntro = () =>
 
           <div className="about-intro__content">
             <div className="about-intro__content__left">
-              <p className="about-intro__content__text">
+              <h2 className="about-intro__content__text title-heading-3">
                 Delivering <strong>dynamic</strong> and <strong>powerful</strong> web experiences with inventive design, audacious web development and a fearless business mindset. 
-              </p>
+              </h2>
 
               <img
                 className="about-intro__img"
@@ -26,9 +26,9 @@ const AboutIntro = () =>
             </div>
 
             <div className="about-intro__content__right">
-              <p className="about-intro__content__text">
+              <h2 className="about-intro__content__text title-heading-3">
                 With the ocean as inspiration that all things are possible and with the idea that the combination of tech and business will result in greater success, our three founders decided to called it <strong>Mar</strong>, sea in Portuguese, and <strong>Zee</strong>, sea in Dutch.
-              </p>
+              </h2>
             </div>
           </div>
         </section>

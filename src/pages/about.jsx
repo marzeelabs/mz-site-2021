@@ -1,6 +1,7 @@
 import Header from './components-global/header';
 import AboutIntro from './pages-sections/about/about-intro';
 import AboutIntroList from './pages-sections/about/about-intro-list';
+import AboutIntroMessage from './pages-sections/about/about-message';
 
 import Footer from './components-global/footer';
 
@@ -10,8 +11,7 @@ const About = () => (
     <main>
       <AboutIntro />
       <AboutIntroList />
-
-      YOO
+      <AboutIntroMessage />
     </main>
     <Footer />
   </>

@@ -1,7 +1,7 @@
-import Header from './components/header';
-import HomepageIntro from './homepage-blocks/homepage-intro';
+import Header from './components-global/header';
+import HomepageIntro from './pages-sections/homepage/homepage-intro';
 
-import Footer from './components/footer';
+import Footer from './components-global/footer';
 
 const About = () => (
   <>

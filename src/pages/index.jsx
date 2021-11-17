@@ -1,10 +1,10 @@
-import Header from './components/header';
-import HomepageIntro from './homepage-blocks/homepage-intro';
-import HomepageInfographic from './homepage-blocks/homepage-infographic';
-import HomepageCaseStudies from './homepage-blocks/homepage-case-studies';
-import HomepageTestimonials from './homepage-blocks/homepage-testimonials';
-import HomepageForm from './homepage-blocks/homepage-form';
-import Footer from './components/footer';
+import Header from './components-global/header';
+import HomepageIntro from './pages-sections/homepage/homepage-intro';
+import HomepageInfographic from './pages-sections/homepage/homepage-infographic';
+import HomepageCaseStudies from './pages-sections/homepage/homepage-case-studies';
+import HomepageTestimonials from './pages-sections/homepage/homepage-testimonials';
+import HomepageForm from './pages-sections/homepage/homepage-form';
+import Footer from './components-global/footer';
 
 const Home = () => (
   <>

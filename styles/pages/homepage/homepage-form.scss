@@ -1,7 +1,7 @@
 @use '../../base'as *;
 
 .homepage-form__wrapper {
-  margin-top: -.125rem;
+  margin-top: var(--negative-margin-top);
   background-color: hsl(var(--clr-black));
   text-align: center;
   position: relative;

@@ -1,5 +1,6 @@
 import Header from './components-global/header';
-import HomepageIntro from './pages-sections/homepage/homepage-intro';
+import AboutIntro from './pages-sections/about/about-intro';
+import AboutIntroList from './pages-sections/about/about-intro-list';
 
 import Footer from './components-global/footer';
 
@@ -7,7 +8,10 @@ const About = () => (
   <>
     <Header />
     <main>
-      Hellooo
+      <AboutIntro />
+      <AboutIntroList />
+
+      YOO
     </main>
     <Footer />
   </>

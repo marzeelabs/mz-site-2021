@@ -16,7 +16,7 @@ const HomepageInfographic = () =>
           <div className="homepage-infographic__right">
             <img
               className="homepage-infographic__img"
-              src="/assets/hp_manta_ray_infographic.png"
+              src="/assets/homepage/hp_manta_ray_infographic.png"
               alt="Assess, Plan, Implement, Maintain, Evolve"
               title="Assess, Plan, Implement, Maintain, Evolve"
               width="300"

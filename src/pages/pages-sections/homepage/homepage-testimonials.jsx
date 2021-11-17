@@ -12,7 +12,7 @@ const HomepageTestimonials = () =>
 
         <img
           className="homepage-testimonials__img"
-          src="/assets/hp_whale.png"
+          src="/assets/homepage/hp_whale.png"
           alt="whale"
           width="300"
           height="600"

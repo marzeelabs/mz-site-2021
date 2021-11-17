@@ -49,7 +49,7 @@
   @include breakpoint(until-desktop) {
     width: 45%;
     float: right;
-    shape-outside: url('/assets/hp_whale.png');
+    shape-outside: url('/assets/homepage/hp_whale.png');
     shape-margin: .5em;
     transform: translateY(calc(var(--displace-value) * -1));
     margin-bottom: calc(var(--displace-value) * -1);

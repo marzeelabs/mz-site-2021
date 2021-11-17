@@ -18,7 +18,7 @@ const HomepageIntroMessage = () =>
 
         <div className="homepage-intro__media">
           <img
-            src="/assets/hp_illustration_top.png"
+            src="/assets/homepage/hp_illustration_top.png"
             alt="intro illustration"
             width="300"
             height="300"

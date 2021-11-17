@@ -25,7 +25,7 @@ const HomepageForm = () =>
         <input type="submit" defaultValue="Submit" className="homepage-form__submit" />
       </form>
 
-      <img className="homepage-form__bg" src="/assets/hp_form_squid.png" alt="form bg"  width="320" height="178"/>
+      <img className="homepage-form__bg" src="/assets/homepage/hp_form_squid.png" alt="form bg"  width="320" height="178"/>
     </section>
 
     </>

@@ -28,6 +28,7 @@
   //
   // Layout
   --max-width-main: 75.625rem; // 1210px
+  --max-width-medium: 54.375rem; // 870px
   --max-width-small: 36.5rem; // 584px
   //
   //
@@ -97,6 +98,10 @@
   --z-index-neutral: 1;
   --z-index-negative: -1;
   --z-index-modal: 999;
+  //
+  //
+  // negative margin-top
+  --negative-margin-top: -.125rem;
 }
 
 //

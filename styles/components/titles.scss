@@ -48,6 +48,16 @@
   }
 }
 
+.title-heading-2 {
+  @include breakpoint(until-desktop) {
+    @include textstyle(heading3)
+  }
+
+  @include breakpoint(desktop) {
+    @include textstyle(heading2)
+  }
+}
+
 .title-heading-3 {
   @include breakpoint(until-desktop) {
     @include textstyle(heading4)

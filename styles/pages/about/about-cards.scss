@@ -1,0 +1,41 @@
+@use '../../base'as *;
+
+.about-cards__wrapper {
+  background-color: hsl(var(--clr-brand-blue-xdark));
+  color: hsl(var(--clr-brand-acqua));
+  overflow: hidden;
+  text-align: center;
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-large) var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: calc(var(--gd-gutter-large) * 2) var(--gd-gutter-desktop);
+  }
+
+  *::selection {
+    background: hsl(var(--clr-brand-acqua));
+    color: hsl(var(--clr-brand-blue-xdark));
+  }
+}
+
+.about-cards__intro {
+  margin: 0 auto;
+  max-width: var(--max-width-medium);
+
+  .title-heading-1 {
+    color: hsl(var(--clr-white));
+    padding: var(--gd-unit) var(--gd-gutter-wide) 0;
+    margin-bottom: var(--gd-gutter-xxxlarge);
+  }
+}
+
+.about-cards {
+  margin: 0 auto;
+  max-width: var(--max-width-small);
+}
+
+.about-cards__item {
+  margin-bottom: var(--gd-gutter-xxxlarge);
+}

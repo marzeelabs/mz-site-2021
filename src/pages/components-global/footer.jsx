@@ -21,36 +21,36 @@ let year = date.getFullYear();
     <ul className="footer-social">
       <SocialIcons />
       <li className="footer-social__item">
-        <a className="footer-social__link" href="">
-          <svg viewBox="0 0 24 24">
+        <a className="footer-social__link" title="Marzee Twitter" href="http://www.twitter.com/marzeelabs" target="_blank">
+          <svg>
             <use xlinkHref="#twitter" />
           </svg>
         </a>
       </li>
       <li className="footer-social__item">
-        <a className="footer-social__link" href="">
-          <svg viewBox="0 0 24 24">
+        <a className="footer-social__link" title="Marzee Linkedin" href="https://www.linkedin.com/company/marzee-labs" target="_blank">
+          <svg>
             <use xlinkHref="#linkedin" />
           </svg>
         </a>
       </li>
       <li className="footer-social__item">
-        <a className="footer-social__link" href="">
-          <svg viewBox="0 0 24 24">
+        <a className="footer-social__link" title="Marzee Facebook" href="https://www.facebook.com/marzeelabs" target="_blank">
+          <svg>
             <use xlinkHref="#facebook" />
           </svg>
         </a>
       </li>
       <li className="footer-social__item">
-        <a className="footer-social__link" href="">
-          <svg viewBox="0 0 24 24">
+        <a className="footer-social__link" title="Marzee Github" href="https://github.com/marzeelabs" target="_blank">
+          <svg>
             <use xlinkHref="#github" />
           </svg>
         </a>
       </li>
       <li className="footer-social__item">
-        <a className="footer-social__link" href="">
-          <svg viewBox="0 0 24 24">
+        <a className="footer-social__link" title="Marzee Medium" href="https://medium.com/marzeelabs" target="_blank">
+          <svg>
             <use xlinkHref="#medium" />
           </svg>
         </a>

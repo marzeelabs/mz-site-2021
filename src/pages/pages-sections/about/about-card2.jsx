@@ -1,4 +1,4 @@
-const AboutCard = () =>
+const AboutCard2 = () =>
 
  (
     <>
@@ -6,19 +6,20 @@ const AboutCard = () =>
 
         <div className="about-card">
 
-          <input type="checkbox" id="card1" className="about-card__more" aria-hidden="true" />
+          <input type="checkbox" id="card2" className="about-card__more" aria-hidden="true" />
 
           <div className="about-card__content">
             <div className="about-card__front">
    
               <h2 className="about-card__title title-display-small"> We work on the web to help you create impact</h2>
 
-              <label htmlFor="card1" className="about-card__button" aria-hidden="true" aria-label="more info" />
+              <label htmlFor="card2" className="about-card__button" aria-hidden="true" aria-label="more info" />
 
             </div>
             {/* end front */}
 
             <div className="about-card__back">
+
 
               <div className="about-card__description__wrapper">
                 <p className="about-card__description">
@@ -28,7 +29,7 @@ const AboutCard = () =>
               </div>
 
 
-              <label htmlFor="card1" className="about-card__button about-card__button--return" aria-hidden="true" aria-label="return" />
+              <label htmlFor="card2" className="about-card__button about-card__button--return" aria-hidden="true" aria-label="return" />
             </div>
             {/* end back */}
           </div>
@@ -38,4 +39,4 @@ const AboutCard = () =>
     </>
   );
 
-export default AboutCard;
+export default AboutCard2;

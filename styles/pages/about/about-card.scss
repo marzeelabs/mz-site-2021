@@ -6,14 +6,11 @@
 }
 
 .about-card__content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform ease-in-out calc(var(--ease-time) * 4);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);
+  transform-style: preserve-3d;
+  transition: transform ease-in-out calc(var(--ease-time) * 4);
 }
 
 .about-card__more {
@@ -26,39 +23,122 @@
 
 .about-card__front,
 .about-card__back {
-  padding: var(--gd-gutter-xwide);
-  transform: translateZ(5rem);
-  width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, var(--gd-gutter-xlarge));
+  gap: var(--gd-unit);
+  justify-items: end;
+  align-items: center;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   border-radius: var(--gd-gutter-mobile);
+  padding: var(--gd-gutter-mobile);
+  // this makes both items occupy same grid space
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+
+  @include breakpoint(mobile) {
+    grid-template-rows: minmax(0, 1fr) minmax(0, var(--gd-gutter-xwide));
+  }
 }
 
 .about-card__front {
-  background-color: hsl(var(--clr-brand-blue));
+  color: hsl(var(--clr-brand-purple));
+
+  .about-cards__item:nth-child(odd) & {
+    background-color: hsl(var(--clr-brand-yellow));
+  }
+
+  .about-cards__item:nth-child(even) & {
+    background-color: hsl(var(--clr-brand-acqua));
+  }
 }
 
 .about-card__back {
   transform: rotateY(180deg);
-  background-color: hsl(var(--clr-brand-acqua));
-  color: hsl(var(--clr-brand-blue-xdark));
+  color: hsl(var(--clr-brand-purple));
+
+  .about-cards__item:nth-child(odd) & {
+    background-color: hsl(var(--clr-brand-acqua));
+  }
+
+  .about-cards__item:nth-child(even) & {
+    background-color: hsl(var(--clr-brand-yellow));
+  }
 }
 
+.about-card__title,
+.about-card__description {
+  padding: var(--gd-gutter-tablet);
+  backface-visibility: hidden;
+
+  @include breakpoint(mobile) {
+    padding: var(--gd-gutter-mobile);
+  }
+}
+
+.about-card__title {
+  @include breakpoint(mobile) {
+    @include textstyle(heading2);
+    font-weight: var(--fw-black);
+  }
+}
+
+// ++++++++++++++++++++++++++++++ back description
+.about-card__description__wrapper {
+  position: relative;
+  z-index: var(--z-index-neutral);
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.about-card__description {
+  @include breakpoint(mobile) {
+    overflow: auto;
+    position: absolute;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::selection {
+    background-color: hsl(var(--clr-brand-purple));
+    color: hsl(var(--clr-brand-acqua));
+  }
+}
+
+// ++++++++++++++++++++++++++++++ arrow buttons
 .about-card__button {
-  text-transform: uppercase;
   cursor: pointer;
   display: block;
-  background-color: hsl(var(--clr-brand-blue-xdark));
-  color: hsl(var(--clr-brand-acqua));
-  border-radius: var(--gd-gutter-mobile);
-  text-align: center;
   backface-visibility: hidden;
-  transition: .3s ease-in-out;
-  margin-top: var(--gd-gutter-xwide);
-  padding: var(--gd-gutter-xwide);
+  transition: background-color ease-in-out var(--ease-time);
+  width: var(--gd-gutter-xlarge);
+  height: var(--gd-gutter-xlarge);
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='21' viewBox='0 0 22 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.3174 16.77L0.970703 2.42503L3.32737 0.0683594L17.6724 14.4117V1.77003H21.0057V20.1034H2.67237V16.77H15.3174Z' fill='%2300F5D3'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-color: hsl(var(--clr-brand-purple));
+  border-radius: var(--gd-gutter-mobile);
 
-  &:hover {}
+  @include breakpoint(mobile) {
+    width: var(--gd-gutter-xwide);
+    height: var(--gd-gutter-xwide);
+    background-size: 16px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus-within {
+    background-color: hsl(var(--clr-brand-blue-xdark));
+  }
+
+  &.about-card__button--return {
+    transform: scaleX(-1);
+  }
 }

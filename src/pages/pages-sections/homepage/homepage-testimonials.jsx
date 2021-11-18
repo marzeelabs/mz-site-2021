@@ -31,12 +31,12 @@ const HomepageTestimonials = () =>
 
             <div className="homepage-testimonial">
               <img className="homepage-testimonial__img" src="https://atav.pt/wp-content/uploads/2021/05/logo.png" alt="testimonial logo" width="144" height="72"/>
-              <h3 className="homepage-testimonial__title">
+              <h2 className="homepage-testimonial__title">
                 We always felt secure and in control of what was happening from a timeframe and budget perspective
-              </h3>
-              <h4 className="homepage-testimonial__subtitle">
+              </h2>
+              <h3 className="homepage-testimonial__subtitle">
                 Co-Founder & Project Lead, Porto i/o
-              </h4>
+              </h3>
             </div>
 
             <div className="homepage-testimonials__navigation">

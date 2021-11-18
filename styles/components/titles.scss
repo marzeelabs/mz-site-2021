@@ -30,7 +30,7 @@
 
 .title-display-small {
   @include breakpoint(until-desktop) {
-    @include textstyle(heading1)
+    @include textstyle(heading1_black)
   }
 
   @include breakpoint(desktop) {

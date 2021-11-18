@@ -27,15 +27,36 @@
   .title-heading-1 {
     color: hsl(var(--clr-white));
     padding: var(--gd-unit) var(--gd-gutter-wide) 0;
-    margin-bottom: var(--gd-gutter-xxxlarge);
+    margin-bottom: var(--gd-gutter-wide);
+
+    @include breakpoint(tablet-large) {
+      margin-bottom: var(--gd-gutter-xxxlarge);
+    }
   }
 }
 
 .about-cards {
   margin: 0 auto;
-  max-width: var(--max-width-small);
+
+  @include breakpoint(desktop) {
+    max-width: var(--max-width-medium);
+  }
 }
 
 .about-cards__item {
-  margin-bottom: var(--gd-gutter-xxxlarge);
+  width: 100%;
+  margin-bottom: var(--gd-gutter-wide);
+
+  @include breakpoint(tablet-large) {
+    width: 75%;
+    margin-bottom: var(--gd-gutter-xxxlarge);
+
+    &:nth-child(odd) {
+      margin-right: auto;
+    }
+
+    &:nth-child(even) {
+      margin-left: auto;
+    }
+  }
 }

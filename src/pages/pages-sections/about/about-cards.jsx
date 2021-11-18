@@ -1,5 +1,5 @@
 import AboutCard from './about-card';
-
+import AboutCard2 from './about-card2';
 const AboutCards = () =>
 
  (
@@ -17,6 +17,9 @@ const AboutCards = () =>
 
         <ul className="about-cards">
           <AboutCard />
+          <AboutCard2 />
+          <AboutCard />
+          <AboutCard2 />
         </ul>
 
 

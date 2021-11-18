@@ -20,7 +20,6 @@ const AboutCard2 = () =>
 
             <div className="about-card__back">
 
-
               <div className="about-card__description__wrapper">
                 <p className="about-card__description">
                   We see our clients as part of the crew, not just as passenger that will be delivered to their final destination. We sail the journey together by working hand in hand - without black boxes. We believe that the best way to deliver an outstanding product is by working directly with our clients.<br /><br />

@@ -1,7 +1,8 @@
 //
 // ++++++++++++ Homepage parts
 //
-@forward '../pages/homepage/homepage-intro.scss';
+//@forward '../pages/homepage/homepage-intro.scss';  // Intro variant 1
+@forward '../pages/homepage/homepage-intro-centered.scss'; // Intro variant 2
 @forward '../pages/homepage/homepage-intro-cards.scss';
 @forward '../pages/homepage/homepage-infographic.scss';
 @forward '../pages/homepage/homepage-case-studies.scss';

@@ -1,4 +1,5 @@
-import HomepageIntroMessage from './homepage-intro-message';
+// import HomepageIntroMessage from './homepage-intro-message';
+import HomepageIntroMessageCentered from './homepage-intro-message-centered';
 import HomepageIntroCards from './homepage-intro-cards';
 
 const HomepageIntro = () =>
@@ -6,8 +7,8 @@ const HomepageIntro = () =>
  (
     <>
       <section className="homepage-intro__wrapper">
-
-        <HomepageIntroMessage />
+        {/* <HomepageIntroMessage /> */}
+        <HomepageIntroMessageCentered />
         <HomepageIntroCards />
 
       </section>

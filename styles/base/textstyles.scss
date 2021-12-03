@@ -73,6 +73,11 @@
     line-height: var(--ln-body);
   }
 
+  @else if $textstyle==body-large {
+    font-size: var(--fs-h3);
+    line-height: var(--ln-h3);
+  }
+
   @else if $textstyle==body-small {
     font-size: var(--fs-body-small);
     font-weight: var(--fw-regular);

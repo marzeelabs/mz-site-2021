@@ -1,0 +1,99 @@
+@use '../../base'as *;
+
+.services-benefits__cards__wrapper {
+  max-width: var(--max-width-main);
+  margin: 0 auto;
+  position: relative;
+  z-index: var(--z-index-lift);
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: var(--gd-gutter-desktop);
+  }
+}
+
+.services-benefits__cards {
+  @include breakpoint(tablet-small) {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + var(--gd-gutter-smallmobile) * 2);
+    margin: 0 calc(var(--gd-gutter-smallmobile) * -1);
+  }
+
+  @include breakpoint(desktop) {
+    width: calc(100% + var(--gd-gutter-tablet) * 2);
+    margin: 0 calc(var(--gd-gutter-tablet) * -1);
+  }
+}
+
+.services-benefits__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--gd-gutter-tablet);
+  background-color: hsl(var(--clr-black));
+  box-shadow: var(--homepage_cards);
+  transition-duration: var(--ease-time);
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    margin-bottom: var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet) var(--gd-gutter-tablet) calc(var(--gd-gutter-tablet) + var(--gd-gutter-large));
+  }
+
+  @include breakpoint(only-tablet) {
+    width: calc(50% - var(--gd-gutter-tablet));
+    margin: 0 var(--gd-gutter-smallmobile) var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: var(--gd-gutter-wide) var(--gd-gutter-wide) calc(var(--gd-gutter-tablet) + var(--gd-gutter-large));
+    width: calc(33.33% - var(--gd-gutter-desktop));
+    margin: 0 var(--gd-gutter-mobile) var(--gd-gutter-desktop);
+  }
+}
+
+.services-benefits__card__title {
+  padding-bottom: var(--gd-gutter-tablet);
+  margin-bottom: var(--gd-gutter-tablet);
+  color: hsl(var(--clr-brand-yellow));
+  text-align: center;
+  border-bottom: 2px solid hsl(var(--clr-brand-yellow));
+}
+
+.services-benefits__card__desc {
+  margin-top: var(--gd-gutter-mobile);
+  color: hsl(var(--clr-white));
+  text-align: center;
+
+  &::selection {
+    color: hsl(var(--clr-brand-blue-xdark));
+    background: hsl(var(--clr-brand-acqua));
+  }
+}
+
+.services-benefits__card__button {
+  @include button($bgcolor-hover: hsl(var(--clr-white)), $border-color-hover: hsl(var(--clr-white)), $border-radius:0);
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.8953 9.66624L9.74335 2.51424L11.6287 0.628906L21.9993 10.9996L11.6287 21.3702L9.74335 19.4849L16.8953 12.3329H0.666016V9.66624H16.8953Z' fill='%233E00EE'/%3E%3C/svg%3E%0A");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: var(--gd-gutter-large);
+  height: var(--gd-gutter-large);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  &.is-active,
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus-within {
+    transform: none;
+  }
+}

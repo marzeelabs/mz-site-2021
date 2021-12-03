@@ -55,9 +55,14 @@
 
 // +++++++++++++++++++++++++++++++++++++++++++++ list
 .about-intro__list {
-  *::selection {
-    color: hsl(var(--clr-brand-blue-xdark));
-    background: hsl(var(--clr-brand-yellow));
+
+  @extend %list-circle;
+  --list-selection-color: hsl(var(--clr-brand-blue-xdark));
+  --list-selection-background: hsl(var(--clr-brand-yellow));
+
+  .about-intro__list__content__right & {
+    --list-selection-color: hsl(var(--clr-brand-yellow));
+    --list-selection-background: hsl(var(--clr-brand-blue-xdark));
   }
 
   @include breakpoint(tablet-large) {
@@ -67,37 +72,17 @@
 
     .about-intro__list__content__right & {
       padding-left: var(--gd-gutter-xlarge);
-
-      *::selection {
-        background: hsl(var(--clr-brand-blue-xdark));
-        color: hsl(var(--clr-brand-yellow));
-      }
     }
   }
 }
 
 .about-intro__list__item {
-  @include textstyle(heading3);
-  display: block;
-  position: relative;
-
-  &:nth-child(n+2) {
-    margin-top: var(--gd-gutter-tablet);
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: calc(var(--gd-unit) / 2);
-    width: var(--gd-gutter-tablet);
-    height: var(--gd-gutter-tablet);
-    border-radius: var(--gd-gutter-tablet);
-    border-style: solid;
-    border-width: .25rem;
-  }
+  @extend %list-circle__item;
+  --list-color: hsl(var(--clr-white));
+  --list-bullet-color: hsl(var(--clr-brand-acqua));
+  font-weight: var(--fw-bold);
 
   .about-intro__list__content__left & {
-    color: hsl(var(--clr-white));
 
     @include breakpoint(until-tablet-large) {
       padding-left: calc(var(--gd-gutter-tablet) + var(--gd-gutter-mobile));
@@ -105,29 +90,18 @@
 
     @include breakpoint(tablet-large) {
       padding-right: calc(var(--gd-gutter-tablet) + var(--gd-gutter-mobile));
-    }
 
-    &::after {
-      border-color: hsl(var(--clr-brand-yellow));
-
-      @include breakpoint(until-tablet-large) {
-        left: 0;
-      }
-
-      @include breakpoint(tablet-large) {
+      &::after {
         right: 0;
+        left: auto;
       }
     }
   }
 
   .about-intro__list__content__right & {
-    color: hsl(var(--clr-brand-blue-xdark));
+    --list-color: hsl(var(--clr-brand-blue-xdark));
+    --list-bullet-color: hsl(var(--clr-white));
     padding-left: calc(var(--gd-gutter-tablet) + var(--gd-gutter-mobile));
-
-    &::after {
-      left: 0;
-      border-color: hsl(var(--clr-white));
-    }
   }
 }
 

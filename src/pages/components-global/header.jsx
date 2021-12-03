@@ -26,7 +26,7 @@ const Header = () => {
           </li>
 
           <li className="header-menu__item">
-            <a className="header-menu__link" href="#">Services</a>
+            <a className="header-menu__link" href="/services">Services</a>
           </li>
 
           <li className="header-menu__item">

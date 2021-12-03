@@ -1,0 +1,34 @@
+@use '../../base'as *;
+
+.services-intro__wrapper {
+  
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-large) var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: calc(var(--gd-gutter-large) * 2) var(--gd-gutter-desktop);
+  }
+}
+
+.services-intro__content {
+  margin: 0 auto;
+  max-width: var(--max-width-medium);
+  text-align: center;
+}
+
+.sevices-intro__title {
+  
+}
+
+.sevices-intro__subtitle {
+  font-weight: var(--fw-regular);
+
+  @include breakpoint(until-desktop) {
+    margin: var(--gd-gutter-wide) auto var(--gd-gutter-desktop);
+  }
+
+  @include breakpoint(desktop) {
+    margin: var(--gd-gutter-xlarge) auto var(--gd-gutter-desktop);
+  }
+}

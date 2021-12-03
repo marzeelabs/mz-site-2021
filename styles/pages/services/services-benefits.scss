@@ -1,0 +1,26 @@
+.services-benefits__content {
+  margin: 0 auto;
+  max-width: var(--max-width-mains);
+}
+
+.sevices-benefits__title {
+  position: relative;
+  margin: 0 auto;
+  max-width: 8ch;
+  background: hsl(var(--clr-white));
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: calc(100vw - (var(--gd-gutter-wide) * 2));
+    max-width: var(--max-width-main);
+    height: 0.125rem;
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: hsl(var(--clr-grey-light));
+  }
+}

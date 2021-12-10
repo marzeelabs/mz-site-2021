@@ -23,7 +23,7 @@
 
   @include breakpoint(desktop) {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--gd-gutter-wide);
     align-items: center;
     padding: var(--gd-gutter-desktop);
@@ -32,6 +32,33 @@
 
     > * {
       max-width: calc(var(--max-width-main) / 2);
+    }
+
+    .case-study:first-of-type {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      align-content: flex-end;
+      justify-self: end;
+      max-width: none;
+      width: 100%;
+
+      .case-study__img-link {
+        max-width: 50rem;
+      }
+
+      .case-study__title {
+        margin-right: var(--gd-gutter-tablet);
+        margin-left: auto;
+        max-width: calc(var(--max-width-main) / 2 - var(--gd-gutter-tablet) * 2);
+      }
+    }
+
+    .case-study:nth-of-type(odd):not(:first-of-type) {
+      justify-self: start;
+    }
+
+    .case-study:nth-of-type(even) {
+      justify-self: end;
     }
   }
 }

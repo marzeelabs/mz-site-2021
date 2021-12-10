@@ -16,14 +16,9 @@
 }
 
 .services-benefits__cards {
-  @include breakpoint(tablet-small) {
+  @include breakpoint(desktop) {
     display: flex;
     flex-wrap: wrap;
-    width: calc(100% + var(--gd-gutter-smallmobile) * 2);
-    margin: 0 calc(var(--gd-gutter-smallmobile) * -1);
-  }
-
-  @include breakpoint(desktop) {
     width: calc(100% + var(--gd-gutter-tablet) * 2);
     margin: 0 calc(var(--gd-gutter-tablet) * -1);
   }
@@ -47,8 +42,7 @@
   }
 
   @include breakpoint(only-tablet) {
-    width: calc(50% - var(--gd-gutter-tablet));
-    margin: 0 var(--gd-gutter-smallmobile) var(--gd-gutter-tablet);
+    margin-bottom: var(--gd-gutter-tablet);
   }
 
   @include breakpoint(desktop) {

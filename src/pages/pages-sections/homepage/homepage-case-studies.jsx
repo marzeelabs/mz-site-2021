@@ -1,4 +1,4 @@
-import HomepageCaseStudy from './homepage-case-study'
+import CaseStudy from '../case-studies/case-study'
 
 const HomepageCaseStudies = () =>
 
@@ -12,9 +12,9 @@ const HomepageCaseStudies = () =>
             <h2 className="homepage-case-studies__subtitle">We will guide you through the best approach towards having an outstanding web product.</h2>
           </div>
 
-          <HomepageCaseStudy />
-          <HomepageCaseStudy />
-          <HomepageCaseStudy />
+          <CaseStudy />
+          <CaseStudy />
+          <CaseStudy />
 
         </div>
 

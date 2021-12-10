@@ -6,7 +6,6 @@
 @forward '../pages/homepage/homepage-intro-cards.scss';
 @forward '../pages/homepage/homepage-infographic.scss';
 @forward '../pages/homepage/homepage-case-studies.scss';
-@forward '../pages/homepage/homepage-case-study.scss';
 @forward '../pages/homepage/homepage-testimonials.scss';
 @forward '../pages/homepage/homepage-testimonials-list.scss';
 @forward '../pages/homepage/homepage-form.scss';
@@ -28,3 +27,9 @@
 @forward '../pages/services/services-benefits.scss';
 @forward '../pages/services/services-benefits-cards.scss';
 @forward '../pages/services/services-benefits-list.scss';
+//
+//
+// ++++++++++++ Case studies page parts
+//
+@forward '../pages/case-studies/case-studies.scss';
+@forward '../pages/case-studies/case-study.scss';

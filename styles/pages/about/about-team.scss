@@ -1,0 +1,19 @@
+@use '../../base'as *;
+
+.about-team__wrapper {
+  background-color: hsl(var(--clr-brand-blue-xdark));
+  color: hsl(var(--clr-brand-acqua));
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: var(--gd-gutter-desktop);
+  }
+
+  *::selection {
+    background: hsl(var(--clr-brand-acqua));
+    color: hsl(var(--clr-brand-blue-xdark));
+  }
+}

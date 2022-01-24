@@ -1,7 +1,7 @@
 @use '../../base'as *;
 
 .about-cards__wrapper {
-  background-color: hsl(var(--clr-brand-blue-xdark));
+  background-image: linear-gradient(0deg, hsl(var(--clr-black)) 0%, hsl(var(--clr-brand-blue-xdark)) 100%);
   color: hsl(var(--clr-brand-acqua));
   overflow: hidden;
   text-align: center;

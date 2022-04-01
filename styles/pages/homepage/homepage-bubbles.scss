@@ -1,0 +1,37 @@
+@use '../../base'as *;
+
+.homepage-intro__bubbles__wrapper {
+  max-width: var(--max-width-main);
+  margin: 0 auto;
+  position: relative;
+  z-index: var(--z-index-lift);
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: var(--gd-gutter-desktop);
+  }
+}
+
+.bubble-demo {
+  max-width: 10rem;
+}
+
+@keyframes bubble-anim {
+  0% {
+    d: path("M 178.401 4.6516 c 62.4577 16.8438 131.101 102.073 86.9213 163.952 c -33.7656 37.609 -58.6412 110.014 -121.112 93.3571 C 77.42 248.59 -31.4734 176.69 14.57 99.3768 C 50.3123 44.2744 107.533 -11.9319 178.401 4.6516 Z");
+  }
+  100% {
+    d: path('M 178.401 4.6516 c 62.4577 16.8438 138.6528 119.4832 81.2054 169.2894 -41.19 35.7109-51.0266 94.071 -115.3957 88.02 -89.674 -8.43 -168.29 -81.3216 -129.64 -162.584 C 47.2208 30.7282 107.5328 -11.9319 178.401 4.6516 Z');
+  }
+}
+
+#bubble-demo {
+  path {
+    stroke-width: 2;
+    stroke: #693DF3;
+    animation: bubble-anim 2s ease-in-out 0s infinite alternate both;
+  }
+}

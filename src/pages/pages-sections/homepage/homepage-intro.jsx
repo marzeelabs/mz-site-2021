@@ -1,6 +1,7 @@
 // import HomepageIntroMessage from './homepage-intro-message';
 import HomepageIntroMessageCentered from './homepage-intro-message-centered';
 import HomepageIntroCards from './homepage-intro-cards';
+import HomepageBubbles from './homepage-bubbles';
 
 const HomepageIntro = () =>
 
@@ -10,7 +11,7 @@ const HomepageIntro = () =>
         {/* <HomepageIntroMessage /> */}
         <HomepageIntroMessageCentered />
         <HomepageIntroCards />
-
+        <HomepageBubbles />
       </section>
       {/* end intro */}
     </>

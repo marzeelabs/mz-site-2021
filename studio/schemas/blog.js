@@ -13,37 +13,37 @@ export default {
       }
     },
     {
-      name: 'blogTitle',
-      title: 'BlogTitle',
+      name: 'title',
+      title: 'Blog Title',
       type: 'string',
     },
     {
-      name: 'blogDescription',
-      title: 'BlogDescription',
+      name: 'description',
+      title: 'Description',
       type: 'string',
     },
     {
-      name: 'blogTag',
-      title: 'BlogTag',
+      name: 'tag',
+      title: 'Tag',
       type: 'array',
       of: [{type: 'string',}]
     },
     {
-      name: 'blogAuthor',
-      title: 'BlogAuthor',
+      name: 'author',
+      title: 'Author',
       type: 'string',
     },
     {
       name: 'authorImage',
-      title: 'AuthorImage',
+      title: 'Author Image',
       type: 'image',
       options: {
         hotspot: true
       },
     },
     {
-      name: 'blogDate',
-      title: 'BlogDate',
+      name: 'date',
+      title: 'Date',
       type: 'date'
     },
   ]

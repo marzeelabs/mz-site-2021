@@ -1,3 +1,4 @@
+import React,{Fragment} from 'react';
 import Header from './components-global/header';
 import HomepageIntro from './pages-sections/homepage/homepage-intro';
 import HomepageInfographic from './pages-sections/homepage/homepage-infographic';
@@ -7,7 +8,7 @@ import HomepageForm from './pages-sections/homepage/homepage-form';
 import Footer from './components-global/footer';
 
 const Home = () => (
-  <>
+  <Fragment>
     <Header />
     <main>
       <HomepageIntro />
@@ -17,7 +18,7 @@ const Home = () => (
       <HomepageForm />
     </main>
     <Footer />
-  </>
+  </Fragment>
 );
 
 export default Home;

@@ -7,18 +7,37 @@ import HomepageTestimonials from './pages-sections/homepage/homepage-testimonial
 import HomepageForm from './pages-sections/homepage/homepage-form';
 import Footer from './components-global/footer';
 
-const Home = () => (
-  <Fragment>
-    <Header />
-    <main>
-      <HomepageIntro />
-      <HomepageInfographic />
-      <HomepageCaseStudies />
-      <HomepageTestimonials />
-      <HomepageForm />
-    </main>
-    <Footer />
-  </Fragment>
+import { client } from '../lib/client';
+import { SanityProvider } from '../context/sanity-context';
+
+const Home = ({ data }) => (
+  <SanityProvider data={ data } >
+    <Fragment>
+      <Header />
+      <main>
+        <HomepageIntro />
+        <HomepageInfographic />
+        <HomepageCaseStudies />
+        <HomepageTestimonials />
+        <HomepageForm />
+      </main>
+      <Footer />
+    </Fragment>
+  </SanityProvider>
+  
 );
+
+export const getStaticProps = async () => {
+  // query all data from sanity
+  const data = await client.fetch(
+    '*[_type in ["blog", "services", "studies", "why", "idea", "banner", "testimonial","testimonialSection"] && !(_id in path(\'drafts.**\'))] | order(order asc)',
+  );
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
 
 export default Home;

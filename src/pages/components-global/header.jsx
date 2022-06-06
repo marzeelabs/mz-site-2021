@@ -30,7 +30,7 @@ const Header = () => {
           </li>
 
           <li className="header-menu__item">
-            <a className="header-menu__link" href="#">Case Studies</a>
+            <a className="header-menu__link" href="/cases">Case Studies</a>
           </li>
 
           <li className="header-menu__item">

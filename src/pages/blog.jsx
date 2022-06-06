@@ -12,7 +12,7 @@ const Blog = ({blogs}) => {
       <main>
         {blogs?.map((blog) => {
           return (
-            <div>
+            <div key={blog.id}>
               <br/>
               <br/>
               <h3>{blog.title}</h3>

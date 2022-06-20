@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from './components-global/header';
 import HomepageIntro from './pages-sections/homepage/homepage-intro';
 import HomepageInfographic from './pages-sections/homepage/homepage-infographic';
@@ -6,18 +7,41 @@ import HomepageTestimonials from './pages-sections/homepage/homepage-testimonial
 import HomepageForm from './pages-sections/homepage/homepage-form';
 import Footer from './components-global/footer';
 
-const Home = () => (
-  <>
-    <Header />
-    <main>
-      <HomepageIntro />
-      <HomepageInfographic />
-      <HomepageCaseStudies />
-      <HomepageTestimonials />
-      <HomepageForm />
-    </main>
-    <Footer />
-  </>
-);
+import { client } from '../lib/client';
+import { SanityProvider } from '../context/sanity-context';
+
+const Home = ({ data }) => {
+
+  return (
+    <SanityProvider data={ data } >
+      <>
+        <Header />
+        <main>
+          <HomepageIntro />
+          <HomepageInfographic />
+          <HomepageCaseStudies />
+          <HomepageTestimonials />
+          <HomepageForm />
+        </main>
+        <Footer />
+      </>
+    </SanityProvider>
+    
+  );
+
+}
+
+export const getStaticProps = async () => {
+  // query all data from sanity
+  const data = await client.fetch(
+    '*[_type in ["blog", "services", "studies", "why", "socials", "idea", "banner", "testimonial","testimonialSection"] && !(_id in path(\'drafts.**\'))] | order(order asc)',
+  );
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
 
 export default Home;

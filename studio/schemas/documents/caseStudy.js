@@ -1,14 +1,11 @@
 export default {
-  name: 'case',
+  name: 'studies',
   title: 'Case Studies',
   type: 'document',
   fields: [{
       name: 'image',
       title: 'Image',
-      type: 'array',
-      of: [{
-        type: 'image'
-      }],
+      type: 'image',
       options: {
         hotspot: true
       }
@@ -31,5 +28,6 @@ export default {
         type: 'string',
       }]
     }
+    
   ]
 }

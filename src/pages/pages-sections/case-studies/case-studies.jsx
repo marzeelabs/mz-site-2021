@@ -1,8 +1,11 @@
+import { useSanity } from '../../../context/sanity-context';
 import CaseStudy from './case-study'
 
-const CaseStudies = () =>
+const CaseStudies = () => {
 
- (
+  const studiesData = useSanity('studies');
+
+ return (
     <>
       <section className="case-studies__wrapper">
         <div className="case-studies__content">
@@ -11,9 +14,8 @@ const CaseStudies = () =>
              <h2 className="case-studies__title title-display-small"><span className="title-heading-1">See What We</span>Have Done with Other Projects</h2>
           </div>
 
-          <CaseStudy />
-          <CaseStudy />
-          <CaseStudy />
+          {studiesData?.map((studies) => <CaseStudy key={studies._id} caseStudy={studies} />)}
+          
 
           <button className="button-main case-studies__cta" type="button" >View More of Our Work</button>
 
@@ -23,5 +25,6 @@ const CaseStudies = () =>
       {/* end case studies */}
     </>
   );
+ }
 
 export default CaseStudies;

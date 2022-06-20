@@ -1,30 +1,32 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import { client } from '../lib/client';
 
 import Header from './components-global/header';
 import Footer from './components-global/footer';
+import CaseStudy from './pages-sections/case-studies/case-study';
 
 const CaseStudies = ({cases}) => {
 
   return (
-    <Fragment>
+    <>
       <Header/>
-      <main>
+      <div className="homepage-case-studies__wrapper" >
        {cases?.map((study) => {
          return (
-           <div key={study.id}>
-            <p>{study.description}</p>
-           </div>
+          <CaseStudy 
+            key={study.id}
+            caseStudy={study}
+            />
          )
        })}
-      </main>
+      </div>
       <Footer/>
-    </Fragment>
+    </>
   )
 }
 
 export const getServerSideProps = async () => {
-  const casesQuery = '*[_type == "case"]';
+  const casesQuery = '*[_type == "studies"]';
   const cases = await client.fetch(casesQuery);
 
   return {

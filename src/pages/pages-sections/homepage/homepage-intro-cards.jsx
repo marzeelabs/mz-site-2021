@@ -20,7 +20,6 @@ const HomepageIntroCards = ({data}) => {
           </div>
           ))}
           
-
         </div>
       </section>
 

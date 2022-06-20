@@ -2,24 +2,17 @@ export default {
   name: 'why',
   title: 'Why Us Section',
   type: 'document',
-  fields: [{
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
-    },
+  fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
     },
     {
-      name: 'description',
-      title: 'Description',
+      name: 'subtitle',
+      title: 'subtitle',
       type: 'string',
     },
-    
-  ]
-}
+
+  ],
+};

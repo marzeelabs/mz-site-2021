@@ -1,4 +1,5 @@
 import { useSanity } from '../../../context/sanity-context';
+import { urlFor } from '../../../lib/client';
 
 const HomepageInfographic = () => {
 
@@ -19,7 +20,7 @@ const HomepageInfographic = () => {
           <div className="homepage-infographic__right">
             <img
               className="homepage-infographic__img"
-              src="/assets/homepage/hp_manta_ray_infographic.png"
+              src={urlFor(data.image)}
               alt="Assess, Plan, Implement, Maintain, Evolve"
               title="Assess, Plan, Implement, Maintain, Evolve"
               width="300"

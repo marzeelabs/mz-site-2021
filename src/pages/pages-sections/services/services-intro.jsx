@@ -1,19 +1,23 @@
+import { useSanity } from '../../../context/sanity-context';
 
-const ServicesIntro = () =>
+const ServicesIntro = () => {
 
- (
-    <>
-      <section className="services-intro__wrapper">
-        <div className="services-intro__content">
+  const data = useSanity('serviceBanner');
 
-          <h1 className="sevices-intro__title title-display">More control over your business</h1>
+  return (
+      <>
+        <section className="services-intro__wrapper">
+          <div className="services-intro__content">
 
-          <h2 className="sevices-intro__subtitle title-heading-1">with the power of a <strong>good tech culture</strong> allied with <strong>insightful business intelligence</strong>.</h2>
+            <h1 className="sevices-intro__title title-display">{data.titleTop}</h1>
+            <h1 className="sevices-intro__title title-display">{data.subtitleTop}</h1>
 
-          <button className="button-secondary services-intro__cta" type="button" >Call 2 action</button>
-        </div>
-      </section>
-    </>
+            <h2 className="sevices-intro__subtitle title-heading-1">{data.regularA} <strong>{data.strongA}</strong> {data.regularB} <strong> {data.strongB} </strong></h2>
+
+            <button className="button-secondary services-intro__cta" type="button" >{data.cta}</button>
+          </div>
+        </section>
+      </>
   );
-
+ }
 export default ServicesIntro;

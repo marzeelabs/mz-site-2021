@@ -14,6 +14,11 @@ import servicesBanner from './documents/servicesBanner';
 import serviceContext from './documents/serviceContext';
 import benefit from './documents/benefit';
 import benefitsSection from './documents/benefitsSection';
+import aboutIntro from './documents/aboutIntro';
+import aboutList from './documents/aboutList';
+import originBanner from './documents/originBanner';
+import goalBanner from './documents/goalBanner';
+import goalCards from './documents/goalCards';
 
 export default createSchema({
   name: 'default',
@@ -31,6 +36,11 @@ export default createSchema({
     servicesBanner,
     serviceContext,
     benefit,
-    benefitsSection
+    benefitsSection,
+    aboutIntro,
+    aboutList,
+    originBanner,
+    goalBanner,
+    goalCards
   ]),
 })

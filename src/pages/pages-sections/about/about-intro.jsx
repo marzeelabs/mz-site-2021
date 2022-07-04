@@ -1,11 +1,17 @@
-const AboutIntro = () =>
+import { useSanity } from '../../../context/sanity-context';
+import { urlFor } from '../../../lib/client';
 
- (
+
+const AboutIntro = () => {
+
+  const introData = useSanity('aboutIntro');
+
+  return (
     <>
       <section className="about-intro__wrapper">
         
         <header className="about-intro__title__wrapper">
-          <h1 className="about-intro__title title-display-small">We are a business-oriented web development company</h1>
+          <h1 className="about-intro__title title-display-small">{introData.header}</h1>
         </header>
 
         <section className="about-intro__content__wrapper">
@@ -18,7 +24,7 @@ const AboutIntro = () =>
 
               <img
                 className="about-intro__img"
-                src="/assets/about/about_octopus.png"
+                src={urlFor(introData.image)}
                 alt="intro illustration"
                 width="300"
                 height="300"
@@ -37,5 +43,7 @@ const AboutIntro = () =>
       {/* end intro */}
     </>
   );
+
+  }
 
 export default AboutIntro;

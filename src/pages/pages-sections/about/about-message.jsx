@@ -1,23 +1,27 @@
-const AboutMessage = () =>
+import { useSanity } from '../../../context/sanity-context';
 
- (
+const AboutMessage = () => {
+
+  const data = useSanity('originBanner');
+
+ return (
     <>
       <section className="about-message__wrapper">
 
         <div className="about-message__content">
           <h1 className="about-message__pretitle title-heading-1">
-            This is our origin,
+            {data.titleTop}
           </h1>
           <h2 className="about-message__title title-display-small">
-            two oceans, tech and business.
+            {data.subtitleTop}
           </h2>
 
           <h2 className="about-message__title-big title-display">
-            This is Marzee
+            {data.titleBottom}
           </h2>
           
           <h3 className="about-message__pretitle title-heading-2">
-            And the power of two or doing things in pairs runs through the Marzee DNA. We are dynamic and ambitious. We thrive in building long-term relationships. 
+            {data.subtitleBottom}
           </h3>
         </div>
 
@@ -25,5 +29,7 @@ const AboutMessage = () =>
       {/* end intro */}
     </>
   );
+
+ }
 
 export default AboutMessage;

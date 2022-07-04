@@ -1,25 +1,28 @@
+import { useSanity } from '../../../context/sanity-context';
 import AboutCard from './about-card';
-import AboutCard2 from './about-card2';
-const AboutCards = () =>
 
- (
+const AboutCards = () => {
+
+  const bannerData = useSanity('goalBanner');
+  const cardData = useSanity('goalCard');
+
+ return (
     <>
       <section className="about-cards__wrapper">
 
         <div className="about-cards__intro">
           <h1 className="title-display-small">
-            Your business goals matter to us
+            {bannerData.titleTop}
           </h1>
           <h2 className="title-heading-1">
-            and we will use all of our technical expertise and culture to help you achieve more. 
+            {bannerData.subtitleTop}
           </h2>
         </div>
 
         <ul className="about-cards">
-          <AboutCard />
-          <AboutCard2 />
-          <AboutCard />
-          <AboutCard2 />
+         {cardData.map((card) => (
+          <AboutCard key={card._id} cardData={card}/>
+         ))}
         </ul>
 
 
@@ -27,5 +30,6 @@ const AboutCards = () =>
       {/* end intro */}
     </>
   );
+ }
 
 export default AboutCards;

@@ -1,0 +1,98 @@
+@use '../../base'as *;
+
+.homepage-case-studies__wrapper {
+  background-color: hsl(var(--clr-brand-purple));
+  color: hsl(var(--clr-brand-acqua));
+  position: relative;
+  z-index: var(--z-index-neutral);
+  margin-top: var(--negative-margin-top);
+  text-align: center;
+}
+
+.homepage-case-studies__content {
+  margin: 0 auto;
+  position: relative;
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet);
+
+    > *:not(:first-child) {
+      margin-top: var(--gd-gutter-xlarge);
+    }
+  }
+
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--gd-gutter-wide);
+    align-items: center;
+    padding: var(--gd-gutter-desktop);
+    margin-bottom: max(-28vw, -30rem);
+    transform: translateY(max(-28vw, -30rem));
+
+    > * {
+      max-width: calc(var(--max-width-main) / 2);
+    }
+
+    .case-study:first-of-type {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      align-content: flex-end;
+      justify-self: end;
+      max-width: none;
+      width: 100%;
+
+      .case-study__img-link {
+        max-width: 50rem;
+      }
+
+      .case-study__title {
+        margin-right: var(--gd-gutter-tablet);
+        margin-left: auto;
+        max-width: calc(var(--max-width-main) / 2 - var(--gd-gutter-tablet) * 2);
+      }
+    }
+
+    .case-study:nth-of-type(odd):not(:first-of-type) {
+      justify-self: start;
+    }
+
+    .case-study:nth-of-type(even) {
+      justify-self: end;
+    }
+  }
+}
+
+// ++++++++++++++++++++++++++++ intro block
+.homepage-case-studies__text {
+  @include breakpoint(desktop) {
+    text-align: right;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: start;
+    margin-top: 23%;
+  }
+
+  > *::selection {
+    color: hsl(var(--clr-brand-blue-xdark));
+    background: hsl(var(--clr-brand-acqua));
+  }
+}
+
+.homepage-case-studies__subtitle {
+  @include textstyle(heading3);
+  margin: var(--gd-gutter-mobile) 0 0;
+
+  @include breakpoint(desktop-midlarge) {
+    @include textstyle(heading2);
+  }
+}
+
+// ++++++++++++++++++++++++++++ cta below
+.homepage-case-studies__cta {
+  margin: var(--gd-gutter-xlarge) auto;
+
+  @include breakpoint(desktop) {
+    margin: var(--gd-gutter-xlarge) auto 0;
+  }
+}

@@ -1,0 +1,71 @@
+// sass-lint:disable no-duplicate-properties no-vendor-prefixes id-name-format indentation
+@use 'variables'as *;
+@use 'mixins'as *;
+@use 'textstyles'as *;
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  // mobile viewport bug fix
+  min-height: -webkit-fill-available;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  padding-top: var(--header-height);
+}
+
+h1 {
+  @include textstyle(heading1);
+  margin: 0;
+}
+
+h2 {
+  @include textstyle(heading2);
+  margin: 0;
+}
+
+h3 {
+  @include textstyle(heading3);
+  margin: 0;
+}
+
+h4 {
+  @include textstyle(heading4);
+  margin: 0;
+}
+
+h5 {
+  @include textstyle(heading5);
+  margin: 0;
+}
+
+h6 {
+  @include textstyle(heading6);
+  margin: 0;
+}
+
+p {
+  @include textstyle(body);
+  margin: 0;
+}
+
+ul,
+ol {
+  @include reset-list();
+}
+
+a {
+  // Help prevent overflow of long words/names/URLs
+  overflow-wrap: break-word;
+  // Optional, not supported for all languages
+  hyphens: auto;
+}

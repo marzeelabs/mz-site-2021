@@ -11,6 +11,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.6.11"
+    "@astrojs/react": "^1.2.2",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^1.6.11",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-astro": "^0.21.0",
+    "prettier": "^2.8.0",
+    "prettier-plugin-astro": "^0.7.0",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.3"
   }
 }

@@ -1,0 +1,56 @@
+@use '../base'as *;
+
+.mz-logo {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  position: relative;
+
+  @include breakpoint(until-desktop) {
+    width: 9.6875rem;
+  }
+
+  @include breakpoint(desktop) {
+    width: 11.25rem;
+  }
+
+  // the pseudo-element padding controls the parents height ratio
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 31.66%;
+  }
+
+  svg.logo-mz {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: transform ease-in-out var(--ease-time);
+  }
+
+  g.wordmark path {
+    fill: hsl(var(--clr-white));
+    transition: fill ease-in-out var(--ease-time);
+  }
+
+  circle.circle {
+    opacity: 0;
+  }
+
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus-within {
+    g.wordmark path {
+      fill: hsl(var(--clr-brand-acqua));
+    }
+
+    svg.logo-mz {
+      transform: translate3d(-50%, -50%, 0) scale(1.035);
+    }
+  }
+}

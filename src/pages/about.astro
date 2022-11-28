@@ -1,0 +1,13 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AboutIntro from '@pages/pages-sections/about/about-intro';
+import AboutIntroList from '@pages/pages-sections/about/about-intro-list';
+import AboutMessage from '@pages/pages-sections/about/about-message';
+import AboutCards from '@pages/pages-sections/about/about-cards';
+---
+<Layout title="About Marzee">
+    <AboutIntro client:load  />
+    <AboutIntroList client:idle />
+    <AboutMessage client:visible />
+    <AboutCards client:visible />
+</Layout>

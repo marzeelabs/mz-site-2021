@@ -1,0 +1,74 @@
+@use '../base'as *;
+
+.header-toggle__wrapper {
+  position: absolute;
+  top: var(--gd-gutter-desktop);
+  right: var(--gd-gutter-tablet);
+  height: var(--gd-gutter-tablet);
+  width: var(--gd-gutter-tablet);
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.header-toggle {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: var(--gd-gutter-tablet);
+  width: var(--gd-gutter-tablet);
+  background: transparent;
+  border: 0;
+}
+
+.header-toggle__icon {
+  --transition-duration: calc(var(--ease-time) * 1.5);
+  transition-duration: var(--transition-duration);
+  display: block;
+  position: absolute;
+  top: var(--gd-unit);
+  left: 0;
+  width: var(--gd-gutter-tablet);
+  height: .125rem;
+  background-color: hsl(var(--clr-brand-acqua));
+
+  &::before,
+  &::after {
+    transition-duration: var(--transition-duration);
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: var(--gd-gutter-tablet);
+    height: .125rem;
+    background-color: hsl(var(--clr-brand-acqua));
+  }
+
+  &::before {
+    top: calc(var(--gd-unit) * -1);
+  }
+
+  &::after {
+    bottom: calc(var(--gd-unit) * -1);
+  }
+
+  .has-menu-open & {
+    transform: rotate(180deg);
+    background: none;
+    width: var(--gd-gutter-tablet);
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

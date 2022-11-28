@@ -1,0 +1,15 @@
+@use '../../base'as *;
+@use '../../components'as *;
+
+// +++++++++++++++++++++++++++++++++++++++++++++ list
+.services-benefits__card__list {
+  @extend %list-circle;
+  --list-selection-color: hsl(var(--clr-brand-blue-xdark));
+  --list-selection-background: hsl(var(--clr-brand-yellow));
+}
+
+.services-benefits__card__list__item {
+  @extend %list-circle__item;
+  --list-color: hsl(var(--clr-white));
+  --list-bullet-color: hsl(var(--clr-brand-acqua));
+}

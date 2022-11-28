@@ -1,0 +1,42 @@
+.services-benefits__content {
+  position: relative;
+  margin: 0 auto;
+  max-width: var(--max-width-mains);
+  
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 20.23%;
+    background-color: hsl(var(--clr-brand-blue-xdark));
+    -webkit-mask-image: var(--background-dip);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+  }
+}
+
+.sevices-benefits__title {
+  position: relative;
+  margin: 0 auto;
+  max-width: 8ch;
+  background: hsl(var(--clr-white));
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: calc(100vw - (var(--gd-gutter-wide) * 2));
+    max-width: var(--max-width-main);
+    height: 0.125rem;
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: hsl(var(--clr-grey-light));
+  }
+}

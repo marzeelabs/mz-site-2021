@@ -1,5 +1,7 @@
 ## To add to this boilerplate:
 
+(do not merge -- just to test netlify trigger)
+
 - Webpack 5
 - Add Page Wrapper and Header and Footer Components
 - Create homepage, example blog post (with filters) and (getting content from json content)

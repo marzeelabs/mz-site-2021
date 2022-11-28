@@ -1,0 +1,71 @@
+{
+    "extends": ["airbnb", "airbnb/hooks"],
+
+    "root": true,
+
+    "globals": {
+      "document": true,
+      "fetch": true,
+      "window": true
+    },
+
+    "rules": {
+      "import/no-extraneous-dependencies": 0,
+      "import/extensions": 0,
+      "array-bracket-spacing": ["error", "always"],
+      "arrow-parens": ["error", "as-needed"],
+      "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
+      "class-methods-use-this": 0,
+      "global-require": 0,
+      "jsx-a11y/label-has-associated-control": [
+        "error",
+        {
+          "assert": "either"
+        }
+      ],
+      "max-len": [
+        "error",
+        120,
+        2,
+        {
+          "ignoreUrls": true,
+          "ignoreComments": false,
+          "ignoreRegExpLiterals": true,
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true
+        }
+      ],
+      "no-continue": 0,
+      "no-mixed-operators": ["error", { "allowSamePrecedence": true }],
+      "no-param-reassign": 0,
+      "no-plusplus": 0,
+      "no-underscore-dangle": 0,
+      "no-useless-constructor": 0,
+      "react/function-component-definition": [
+        "error",
+        {
+          "namedComponents": "arrow-function",
+          "unnamedComponents": "arrow-function"
+        }
+      ],
+      "react/jsx-curly-spacing": [
+        "error",
+        { "when": "always", "children": true }
+      ],
+      "react/jsx-props-no-spreading": 0,
+      "react/react-in-jsx-scope": 0,
+      "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+      "no-use-before-define": 0,
+      "react/require-default-props": 0,
+      "wrap-iife": 0,
+      "no-undef": 0
+    },
+
+    "parser": "@typescript-eslint/parser",
+
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    }
+  }

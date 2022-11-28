@@ -1,0 +1,176 @@
+@use '../../base'as *;
+
+.homepage-infographic__wrapper {
+  background-color: hsl(var(--clr-brand-yellow));
+  background-image: url("data:image/svg+xml,%3Csvg width='1680' height='390' preserveAspectRatio='none' viewBox='0 0 1680 390' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 389.5V0C0 0 320.25 94.2474 840 94.2474C1359.75 94.2474 1680 0 1680 0V389.5H0Z' fill='%235C0286'/%3E%3C/svg%3E%0A");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 10%;
+  position: relative;
+  z-index: var(--z-index-neutral);
+}
+
+.homepage-infographic__content {
+  max-width: var(--max-width-main);
+  margin: 0 auto;
+  position: relative;
+  z-index: var(--z-index-lift);
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet);
+    text-align: center;
+  }
+
+  @include breakpoint(desktop) {
+    padding: var(--gd-gutter-desktop);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.homepage-infographic__left,
+.homepage-infographic__right {
+  @include breakpoint(until-desktop) {
+    width: 100%;
+  }
+
+  @include breakpoint(desktop) {
+    width: calc(50% - var(--gd-gutter-desktop));
+  }
+}
+
+// ++++++++++++++++++++left block
+.homepage-infographic__left {
+  > *::selection {
+    color: hsl(var(--clr-brand-yellow));
+    background: hsl(var(--clr-brand-purple));
+  }
+}
+
+.homepage-infographic__title {
+  margin: var(--gd-gutter-mobile) 0;
+  color: hsl(var(--clr-brand-purple));
+}
+
+.homepage-infographic__subtitle {
+  @include breakpoint(until-desktop-midlarge) {
+    @include textstyle(heading2);
+  }
+
+  @include breakpoint(desktop) {
+    margin-top: var(--gd-gutter-wide)
+  }
+
+  @include breakpoint(desktop-midlarge) {
+    @include textstyle(heading1);
+  }
+}
+
+.homepage-infographic__subtitle--small {
+  @include breakpoint(until-desktop) {
+    margin-bottom: var(--gd-gutter-wide)
+  }
+
+  @include breakpoint(until-desktop-midlarge) {
+    @include textstyle(heading3);
+  }
+
+  @include breakpoint(desktop-midlarge) {
+    @include textstyle(heading2);
+  }
+}
+
+// ++++++++++++++++++++++++++ right block
+.homepage-infographic__right {
+  position: relative;
+  z-index: var(--z-index-lift);
+
+  @include breakpoint(until-desktop) {
+    margin: 0 auto;
+    max-width: 37.5rem;
+  }
+}
+
+.homepage-infographic__img {
+  position: relative;
+  z-index: var(--z-index-negative);
+  filter: drop-shadow(0 2.875rem .8125rem rgba(0, 0, 0, .35));
+
+  @include breakpoint(desktop-large) {
+    filter: drop-shadow(0 3.875rem .8125rem rgba(0, 0, 0, .35));
+  }
+}
+
+// +++++++++++++++++++++++++++++ text pills
+.homepage-infographic__item {
+  filter: drop-shadow(0 1.875rem .8125rem rgba(0, 0, 0, .15));
+  position: absolute;
+  display: inline-block;
+  z-index: var(--z-index-lift);
+  color: hsl(var(--clr-brand-acqua));
+  background: hsl(var(--clr-brand-purple));
+  border-radius: var(--gd-gutter-tablet);
+
+  @include breakpoint(mobile) {
+    @include textstyle(body-bold);
+    padding: calc(var(--gd-unit) / 2) var(--gd-gutter-mobile);
+  }
+
+  @include breakpoint(tablet-small) {
+    @include textstyle(heading5);
+    padding: var(--gd-unit) var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(tablet) {
+    @include textstyle(heading4);
+  }
+
+  &:nth-child(1) {
+    top: 41%;
+    left: 2%;
+  }
+
+  &:nth-child(2) {
+    top: 8%;
+    left: 4%;
+
+    @include breakpoint(desktop-large) {
+      left: 7%;
+    }
+  }
+
+  &:nth-child(3) {
+    top: 0%;
+    right: 6%;
+
+    @include breakpoint(tablet-small) {
+      top: 2%;
+    }
+
+    @include breakpoint(desktop-large) {
+      right: 12%;
+    }
+  }
+
+  &:nth-child(4) {
+    top: 34%;
+    right: -3%;
+
+    @include breakpoint(desktop-large) {
+      top: 29%;
+      right: -2%;
+    }
+  }
+
+  &:nth-child(5) {
+    top: 52%;
+    right: 40%;
+
+    @include breakpoint(mobile) {
+      top: 51%;
+      right: 35%;
+    }
+  }
+}

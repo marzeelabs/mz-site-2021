@@ -1,0 +1,44 @@
+@use '../../base'as *;
+
+.about-message__wrapper {
+  background-color: hsl(var(--clr-white));
+  overflow: hidden;
+  text-align: center;
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-large) var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: calc(var(--gd-gutter-large) * 2) var(--gd-gutter-desktop);
+  }
+
+  *::selection {
+    color: hsl(var(--clr-brand-acqua));
+    background: hsl(var(--clr-brand-blue-xdark));
+  }
+}
+
+.about-message__content {
+  margin: 0 auto;
+  max-width: var(--max-width-medium);
+}
+
+.about-message__title,
+.about-message__title-big {
+  color: hsl(var(--clr-brand-blue))
+}
+
+.about-message__title-big {
+  @include breakpoint(until-desktop) {
+    margin: var(--gd-gutter-wide) auto var(--gd-unit);
+  }
+
+  @include breakpoint(desktop) {
+    margin: var(--gd-gutter-xlarge) auto var(--gd-unit);
+  }
+}
+
+.about-message__pretitle {
+  color: hsl(var(--clr-brand-blue-xdark));
+}

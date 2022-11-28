@@ -1,0 +1,9 @@
+@use '../base'as *;
+
+.button-main {
+  @include button();
+}
+
+.button-secondary {
+  @include button-secondary();
+}

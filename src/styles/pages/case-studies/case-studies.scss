@@ -1,0 +1,79 @@
+@use '../../base'as *;
+
+.case-studies__wrapper {
+  background-image: linear-gradient(180deg, hsl(var(--clr-brand-blue-xdark)) 0%, hsl(var(--clr-black)) 100%);
+  color: hsl(var(--clr-brand-acqua));
+  position: relative;
+  z-index: var(--z-index-neutral);
+}
+
+.case-studies__content {
+  margin: 0 auto;
+  position: relative;
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet);
+    text-align: center;
+
+    > *:not(:first-child) {
+      margin-top: var(--gd-gutter-xlarge);
+    }
+  }
+
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--gd-gutter-wide);
+    align-items: center;
+    padding: var(--gd-gutter-desktop) var(--gd-gutter-desktop) var(--gd-gutter-xxxlarge);
+    max-width: var(--max-width-main);
+
+    @include breakpoint(desktop) {
+      .case-study:nth-child(2) {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+  
+      .case-study:nth-child(3) {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+  
+      .case-study:nth-child(4) {
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+    }
+  }
+}
+
+// ++++++++++++++++++++++++++++ intro block
+.case-studies__text {
+  @include breakpoint(desktop) {
+    margin-top: 10%;
+    grid-row-start: 1;
+  }
+
+  > *::selection {
+    color: hsl(var(--clr-brand-brand));
+    background: hsl(var(--clr-brand-acqua));
+  }
+}
+
+.case-studies__title {
+  color: hsl(var(--clr-brand-yellow));
+
+  span {
+    display: block;
+    color: hsl(var(--clr-white));
+  }
+}
+
+// ++++++++++++++++++++++++++++ cta below
+.case-studies__cta {
+  margin: var(--gd-gutter-xlarge) auto;
+
+  @include breakpoint(desktop) {
+    margin: 0 auto var(--gd-gutter-xlarge);
+  }
+}

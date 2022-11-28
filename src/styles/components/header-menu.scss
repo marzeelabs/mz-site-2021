@@ -1,0 +1,86 @@
+@use '../base'as *;
+
+.header-menu {
+  color: hsl(var(--clr-white));
+
+  @include breakpoint(until-desktop) {
+    width: 100%;
+    max-height: 0;
+    transition: max-height ease var(--ease-time);
+    overflow: hidden;
+
+    .has-menu-open & {
+      overflow: auto;
+      max-height: calc(100vh - var(--header-height));
+    }
+  }
+
+  @include breakpoint(desktop) {
+    text-align: right;
+  }
+}
+
+.header-menu__item {
+  @include breakpoint(until-desktop) {
+    display: block;
+    text-align: center;
+    border-bottom: .0625rem solid hsl(var(--clr-brand-acqua) / .35);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    display: inline-block;
+    margin-left: var(--gd-gutter-desktop);
+  }
+}
+
+.header-menu__link {
+  @include textstyle(body-bold);
+  text-decoration: none;
+  color: hsl(var(--clr-white));
+  transition: color ease var(--ease-time);
+
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-mobile);
+    display: block;
+  }
+
+  @include breakpoint(desktop) {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '\00a0';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: .375rem;
+      width: 1.3125rem;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='6' viewBox='0 0 21 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4.5L4.03467 3.06376C5.32387 2.15374 7.0755 2.27694 8.22462 3.35846V3.35846C9.50297 4.56162 11.497 4.56162 12.7754 3.35846V3.35846C13.9245 2.27694 15.6761 2.15374 16.9653 3.06376L19 4.5' stroke='%2300F5D3' stroke-width='3' stroke-linecap='round'/%3e%3c/svg%3e ");
+      background-size: 0 0;
+      background-position: top center;
+      background-repeat: no-repeat;
+      transition: background-size ease var(--ease-time);
+      pointer-events: none;
+    }
+  }
+
+  &.is-active,
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus-within {
+    color: hsl(var(--clr-brand-acqua));
+
+    @include breakpoint(desktop) {
+      &::after {
+        background-size: 100% 100%;
+        pointer-events: all;
+      }
+    }
+  }
+}

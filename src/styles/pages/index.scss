@@ -1,0 +1,35 @@
+//
+// ++++++++++++ Homepage parts
+//
+//@forward '../pages/homepage/homepage-intro.scss';  // Intro variant 1
+@forward '../pages/homepage/homepage-intro-centered.scss'; // Intro variant 2
+@forward '../pages/homepage/homepage-intro-cards.scss';
+@forward '../pages/homepage/homepage-infographic.scss';
+@forward '../pages/homepage/homepage-case-studies.scss';
+@forward '../pages/homepage/homepage-testimonials.scss';
+@forward '../pages/homepage/homepage-testimonials-list.scss';
+@forward '../pages/homepage/homepage-form.scss';
+//
+//
+// ++++++++++++ About page parts
+//
+@forward '../pages/about/about-intro.scss';
+@forward '../pages/about/about-intro-list.scss';
+@forward '../pages/about/about-message.scss';
+@forward '../pages/about/about-cards.scss';
+@forward '../pages/about/about-card.scss';
+//
+//
+// ++++++++++++ Services page parts
+//
+@forward '../pages/services/services-intro.scss';
+@forward '../pages/services/services-context.scss';
+@forward '../pages/services/services-benefits.scss';
+@forward '../pages/services/services-benefits-cards.scss';
+@forward '../pages/services/services-benefits-list.scss';
+//
+//
+// ++++++++++++ Case studies page parts
+//
+@forward '../pages/case-studies/case-studies.scss';
+@forward '../pages/case-studies/case-study.scss';

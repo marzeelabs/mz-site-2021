@@ -1,0 +1,23 @@
+@use '../../base'as *;
+
+.services-context__wrapper {
+  
+  @include breakpoint(until-desktop) {
+    padding: var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0 var(--gd-gutter-desktop) calc(var(--gd-gutter-large) * 2);
+  }
+}
+
+.services-context__content {
+  margin: 0 auto;
+  max-width: var(--max-width-main);
+  columns: 2 16.25rem;
+
+  p {
+    @include textstyle(body-large);
+    margin-bottom: var(--gd-gutter-tablet);
+  }
+}

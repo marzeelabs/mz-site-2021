@@ -1,0 +1,13 @@
+---
+import Layout from '@layouts/Layout.astro';
+import ServicesIntro from '@pages/pages-sections/services/services-intro';
+import ServicesContext from '@pages/pages-sections/services/services-context';
+import ServicesBenefits from '@pages/pages-sections/services/services-benefits';
+import CaseStudies from './case-studies.astro';
+---
+<Layout title="Services">
+    <ServicesIntro client:load />
+    <ServicesContext client:visible />
+    <ServicesBenefits client:visible />
+    <CaseStudies />
+</Layout>

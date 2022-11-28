@@ -1,0 +1,138 @@
+// sass-lint:disable
+@use 'variables'as *;
+@use 'textstyles'as *;
+@use 'breakpoints'as *;
+
+//
+// List reset
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none outside none;
+  list-style-image: none;
+
+  & li {
+    list-style: none outside none;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  word-wrap: normal;
+}
+
+// visually-hidden--off()
+//
+// Turns off the visually-hidden effect.
+//
+@mixin visually-hidden--off {
+  position: static !important;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+//
+// clearfix
+@mixin clearfixer {
+
+  &::before,
+  &::after {
+    content: ''; // 1
+    display: table; // 2
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+//
+// button
+@mixin button($bgcolor: hsl(var(--clr-brand-acqua)),
+  $bgcolor-hover: hsl(var(--clr-brand-blue)),
+  $color: hsl(var(--clr-brand-blue)),
+  $color-hover: hsl(var(--clr-white)),
+  $border-color: hsl(var(--clr-brand-acqua)),
+  $border-color-hover: hsl(var(--clr-brand-blue)),
+  $border-radius: var(--border-radius)) {
+  display: inline-block;
+  border: 1px solid $border-color;
+  color: $color;
+  background-color: $bgcolor;
+  cursor: pointer;
+  transition: all ease-in-out calc(var(--ease-time) * 1.5);
+  border-radius: $border-radius;
+
+  @include breakpoint(until-desktop) {
+    @include textstyle(heading4);
+    padding: var(--gd-gutter-smallmobile) var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    @include textstyle(heading3);
+    padding: var(--gd-gutter-mobile) var(--gd-gutter-desktop);
+  }
+
+  &.is-active,
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus-within {
+    outline: 0;
+    color: $color-hover;
+    background-color: $bgcolor-hover;
+    border: 1px solid $border-color-hover;
+    box-shadow: var(--homepage_cards);
+    transform: translateY(-4px);
+  }
+}
+
+// button secondary
+@mixin button-secondary($bgcolor: hsl(var(--clr-brand-blue)),
+  $bgcolor-hover: hsl(var(--clr-brand-blue)),
+  $color: hsl(var(--clr-white)),
+  $color-hover: hsl(var(--clr-white)),
+  $border-color: hsl(var(--clr-brand-blue)),
+  $border-color-hover: hsl(var(--clr-brand-blue)),
+  $border-radius: var(--border-radius)) {
+  display: inline-block;
+  border: 1px solid $border-color;
+  color: $color;
+  background-color: $bgcolor;
+  cursor: pointer;
+  transition: all ease-in-out calc(var(--ease-time) * 1.5);
+  border-radius: $border-radius;
+
+  @include breakpoint(until-desktop) {
+    @include textstyle(heading4);
+    padding: var(--gd-gutter-smallmobile) var(--gd-gutter-tablet);
+  }
+
+  @include breakpoint(desktop) {
+    @include textstyle(heading3);
+    padding: var(--gd-gutter-mobile) var(--gd-gutter-desktop);
+  }
+
+  &.is-active,
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus-within {
+    outline: 0;
+    color: $color-hover;
+    background-color: $bgcolor-hover;
+    border: 1px solid $border-color-hover;
+    box-shadow: var(--homepage_cards);
+    transform: translateY(-4px);
+  }
+}
